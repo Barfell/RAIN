@@ -1,0 +1,3 @@
+---- __WFE() Matches (2 in 1 files) ----
+Stm32f4xx_pwr.c (e:\project\ucosiii\lib\src):      - The Sleep mode is entered by using the __WFI() or __WFE() functions.
+Stm32f4xx_pwr.c (e:\project\ucosiii\lib\src):    __WFE();

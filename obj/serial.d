@@ -1,0 +1,12 @@
+..\obj\serial.o: ..\Protocol\drv\src\serial.c
+..\obj\serial.o: ..\uCOSIII\uC-Serial\Source\serial.h
+..\obj\serial.o: ..\uCOSIII\uC-CPU\cpu.h
+..\obj\serial.o: ..\uCOSIII\uC-CPU\cpu_def.h
+..\obj\serial.o: ..\App\cpu_cfg.h
+..\obj\serial.o: ..\uCOSIII\uC-LIB\lib_def.h
+..\obj\serial.o: ..\uCOSIII\uC-LIB\lib_ascii.h
+..\obj\serial.o: ..\uCOSIII\uC-LIB\lib_str.h
+..\obj\serial.o: ..\App\lib_cfg.h
+..\obj\serial.o: ..\uCOSIII\uC-LIB\lib_mem.h
+..\obj\serial.o: ..\uCOSIII\uC-CPU\cpu_core.h
+..\obj\serial.o: ..\uCOSIII\uC-LIB\lib_mem.h

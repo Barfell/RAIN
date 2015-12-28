@@ -1,0 +1,234 @@
+Dependencies for Project 'emWin', Target 'emWin': (DO NOT MODIFY !)
+F (..\App\main.c)(0x559F3CB6)(-c --cpu Cortex-M4 -D__MICROLIB -g -O0 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib-I D:\keil\ARM\RV31\INC-I D:\keil\ARM\CMSIS\Include-I D:\keil\ARM\Inc\ST\STM32F4xx-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+I (..\App\stm32f4xx.h)(0x55279D33)
+I (D:\keil\ARM\CMSIS\Include\core_cm4.h)(0x532BF7C2)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (D:\keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cm4_simd.h)(0x532BF7C2)
+I (D:\keil\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532BF35A)
+I (..\App\stm32f4xx_conf.h)(0x559F253F)
+I (..\LIB\INC\stm32f4xx_crc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_exti.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_gpio.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_rcc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_syscfg.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_usart.h)(0x55279D33)
+I (..\LIB\INC\misc.h)(0x55279D33)
+I (..\emWin\inc\GUI.h)(0x52E7F27F)
+I (..\emWin\inc\GUI_ConfDefaults.h)(0x52E7F27F)
+I (..\emWin\Config\GUIConf.h)(0x52E7F264)
+I (..\emWin\inc\GUI_Type.h)(0x52E7F27F)
+I (..\emWin\inc\LCD.h)(0x52E7F27F)
+I (..\emWin\inc\Global.h)(0x52E7F27E)
+I (..\emWin\inc\GUI_Version.h)(0x52E7F27F)
+I (..\App\BSP\lcd_ili9325.h)(0x559F33DA)
+F (..\App\stm32f4xx_it.c)(0x559F3C27)(-c --cpu Cortex-M4 -D__MICROLIB -g -O0 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib-I D:\keil\ARM\RV31\INC-I D:\keil\ARM\CMSIS\Include-I D:\keil\ARM\Inc\ST\STM32F4xx-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\stm32f4xx_it.o --omf_browse ..\obj\stm32f4xx_it.crf --depend ..\obj\stm32f4xx_it.d)
+I (..\App\stm32f4xx.h)(0x55279D33)
+I (D:\keil\ARM\CMSIS\Include\core_cm4.h)(0x532BF7C2)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (D:\keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cm4_simd.h)(0x532BF7C2)
+I (D:\keil\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532BF35A)
+I (..\App\stm32f4xx_conf.h)(0x559F253F)
+I (..\LIB\INC\stm32f4xx_crc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_exti.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_gpio.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_rcc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_syscfg.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_usart.h)(0x55279D33)
+I (..\LIB\INC\misc.h)(0x55279D33)
+I (..\App\stm32f4xx_it.h)(0x55279D33)
+F (..\App\stm32f4xx_conf.h)(0x559F253F)()
+F (..\App\system_stm32f4xx.c)(0x55279D33)(-c --cpu Cortex-M4 -D__MICROLIB -g -O0 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib-I D:\keil\ARM\RV31\INC-I D:\keil\ARM\CMSIS\Include-I D:\keil\ARM\Inc\ST\STM32F4xx-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\system_stm32f4xx.o --omf_browse ..\obj\system_stm32f4xx.crf --depend ..\obj\system_stm32f4xx.d)
+I (..\App\stm32f4xx.h)(0x55279D33)
+I (D:\keil\ARM\CMSIS\Include\core_cm4.h)(0x532BF7C2)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (D:\keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cm4_simd.h)(0x532BF7C2)
+I (D:\keil\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532BF35A)
+I (..\App\stm32f4xx_conf.h)(0x559F253F)
+I (..\LIB\INC\stm32f4xx_crc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_exti.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_gpio.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_rcc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_syscfg.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_usart.h)(0x55279D33)
+I (..\LIB\INC\misc.h)(0x55279D33)
+F (..\startup_stm32f40xx.s)(0x55279D33)(--cpu Cortex-M4 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I D:\keil\ARM\RV31\INC-I D:\keil\ARM\CMSIS\Include-I D:\keil\ARM\Inc\ST\STM32F4xx--list ..\list\startup_stm32f40xx.lst --xref -o ..\obj\startup_stm32f40xx.o --depend ..\obj\startup_stm32f40xx.d)
+F (..\LIB\SRC\misc.c)(0x55279D32)(-c --cpu Cortex-M4 -D__MICROLIB -g -O0 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib-I D:\keil\ARM\RV31\INC-I D:\keil\ARM\CMSIS\Include-I D:\keil\ARM\Inc\ST\STM32F4xx-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\misc.o --omf_browse ..\obj\misc.crf --depend ..\obj\misc.d)
+I (..\LIB\INC\misc.h)(0x55279D33)
+I (..\App\stm32f4xx.h)(0x55279D33)
+I (D:\keil\ARM\CMSIS\Include\core_cm4.h)(0x532BF7C2)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (D:\keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cm4_simd.h)(0x532BF7C2)
+I (D:\keil\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532BF35A)
+I (..\App\stm32f4xx_conf.h)(0x559F253F)
+I (..\LIB\INC\stm32f4xx_crc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_exti.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_gpio.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_rcc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_syscfg.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_usart.h)(0x55279D33)
+F (..\LIB\SRC\stm32f4xx_crc.c)(0x55279D32)(-c --cpu Cortex-M4 -D__MICROLIB -g -O0 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib-I D:\keil\ARM\RV31\INC-I D:\keil\ARM\CMSIS\Include-I D:\keil\ARM\Inc\ST\STM32F4xx-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\stm32f4xx_crc.o --omf_browse ..\obj\stm32f4xx_crc.crf --depend ..\obj\stm32f4xx_crc.d)
+I (..\LIB\INC\stm32f4xx_crc.h)(0x55279D33)
+I (..\App\stm32f4xx.h)(0x55279D33)
+I (D:\keil\ARM\CMSIS\Include\core_cm4.h)(0x532BF7C2)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (D:\keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cm4_simd.h)(0x532BF7C2)
+I (D:\keil\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532BF35A)
+I (..\App\stm32f4xx_conf.h)(0x559F253F)
+I (..\LIB\INC\stm32f4xx_exti.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_gpio.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_rcc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_syscfg.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_usart.h)(0x55279D33)
+I (..\LIB\INC\misc.h)(0x55279D33)
+F (..\LIB\SRC\stm32f4xx_exti.c)(0x55279D32)(-c --cpu Cortex-M4 -D__MICROLIB -g -O0 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib-I D:\keil\ARM\RV31\INC-I D:\keil\ARM\CMSIS\Include-I D:\keil\ARM\Inc\ST\STM32F4xx-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\stm32f4xx_exti.o --omf_browse ..\obj\stm32f4xx_exti.crf --depend ..\obj\stm32f4xx_exti.d)
+I (..\LIB\INC\stm32f4xx_exti.h)(0x55279D33)
+I (..\App\stm32f4xx.h)(0x55279D33)
+I (D:\keil\ARM\CMSIS\Include\core_cm4.h)(0x532BF7C2)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (D:\keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cm4_simd.h)(0x532BF7C2)
+I (D:\keil\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532BF35A)
+I (..\App\stm32f4xx_conf.h)(0x559F253F)
+I (..\LIB\INC\stm32f4xx_crc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_gpio.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_rcc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_syscfg.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_usart.h)(0x55279D33)
+I (..\LIB\INC\misc.h)(0x55279D33)
+F (..\LIB\SRC\stm32f4xx_gpio.c)(0x55279D32)(-c --cpu Cortex-M4 -D__MICROLIB -g -O0 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib-I D:\keil\ARM\RV31\INC-I D:\keil\ARM\CMSIS\Include-I D:\keil\ARM\Inc\ST\STM32F4xx-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\stm32f4xx_gpio.o --omf_browse ..\obj\stm32f4xx_gpio.crf --depend ..\obj\stm32f4xx_gpio.d)
+I (..\LIB\INC\stm32f4xx_gpio.h)(0x55279D33)
+I (..\App\stm32f4xx.h)(0x55279D33)
+I (D:\keil\ARM\CMSIS\Include\core_cm4.h)(0x532BF7C2)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (D:\keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cm4_simd.h)(0x532BF7C2)
+I (D:\keil\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532BF35A)
+I (..\App\stm32f4xx_conf.h)(0x559F253F)
+I (..\LIB\INC\stm32f4xx_crc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_exti.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_rcc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_syscfg.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_usart.h)(0x55279D33)
+I (..\LIB\INC\misc.h)(0x55279D33)
+F (..\LIB\SRC\stm32f4xx_rcc.c)(0x55279D32)(-c --cpu Cortex-M4 -D__MICROLIB -g -O0 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib-I D:\keil\ARM\RV31\INC-I D:\keil\ARM\CMSIS\Include-I D:\keil\ARM\Inc\ST\STM32F4xx-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\stm32f4xx_rcc.o --omf_browse ..\obj\stm32f4xx_rcc.crf --depend ..\obj\stm32f4xx_rcc.d)
+I (..\LIB\INC\stm32f4xx_rcc.h)(0x55279D33)
+I (..\App\stm32f4xx.h)(0x55279D33)
+I (D:\keil\ARM\CMSIS\Include\core_cm4.h)(0x532BF7C2)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (D:\keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cm4_simd.h)(0x532BF7C2)
+I (D:\keil\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532BF35A)
+I (..\App\stm32f4xx_conf.h)(0x559F253F)
+I (..\LIB\INC\stm32f4xx_crc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_exti.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_gpio.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_syscfg.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_usart.h)(0x55279D33)
+I (..\LIB\INC\misc.h)(0x55279D33)
+F (..\LIB\SRC\stm32f4xx_syscfg.c)(0x55279D32)(-c --cpu Cortex-M4 -D__MICROLIB -g -O0 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib-I D:\keil\ARM\RV31\INC-I D:\keil\ARM\CMSIS\Include-I D:\keil\ARM\Inc\ST\STM32F4xx-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\stm32f4xx_syscfg.o --omf_browse ..\obj\stm32f4xx_syscfg.crf --depend ..\obj\stm32f4xx_syscfg.d)
+I (..\LIB\INC\stm32f4xx_syscfg.h)(0x55279D33)
+I (..\App\stm32f4xx.h)(0x55279D33)
+I (D:\keil\ARM\CMSIS\Include\core_cm4.h)(0x532BF7C2)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (D:\keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cm4_simd.h)(0x532BF7C2)
+I (D:\keil\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532BF35A)
+I (..\App\stm32f4xx_conf.h)(0x559F253F)
+I (..\LIB\INC\stm32f4xx_crc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_exti.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_gpio.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_rcc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_usart.h)(0x55279D33)
+I (..\LIB\INC\misc.h)(0x55279D33)
+F (..\LIB\SRC\stm32f4xx_usart.c)(0x55279D32)(-c --cpu Cortex-M4 -D__MICROLIB -g -O0 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib-I D:\keil\ARM\RV31\INC-I D:\keil\ARM\CMSIS\Include-I D:\keil\ARM\Inc\ST\STM32F4xx-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\stm32f4xx_usart.o --omf_browse ..\obj\stm32f4xx_usart.crf --depend ..\obj\stm32f4xx_usart.d)
+I (..\LIB\INC\stm32f4xx_usart.h)(0x55279D33)
+I (..\App\stm32f4xx.h)(0x55279D33)
+I (D:\keil\ARM\CMSIS\Include\core_cm4.h)(0x532BF7C2)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (D:\keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cm4_simd.h)(0x532BF7C2)
+I (D:\keil\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532BF35A)
+I (..\App\stm32f4xx_conf.h)(0x559F253F)
+I (..\LIB\INC\stm32f4xx_crc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_exti.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_gpio.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_rcc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_syscfg.h)(0x55279D33)
+I (..\LIB\INC\misc.h)(0x55279D33)
+F (..\App\BSP\lcd_ili9325.c)(0x559F3712)(-c --cpu Cortex-M4 -D__MICROLIB -g -O0 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib-I D:\keil\ARM\RV31\INC-I D:\keil\ARM\CMSIS\Include-I D:\keil\ARM\Inc\ST\STM32F4xx-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\lcd_ili9325.o --omf_browse ..\obj\lcd_ili9325.crf --depend ..\obj\lcd_ili9325.d)
+I (..\App\stm32f4xx.h)(0x55279D33)
+I (D:\keil\ARM\CMSIS\Include\core_cm4.h)(0x532BF7C2)
+I (D:\keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (D:\keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532BF7C2)
+I (D:\keil\ARM\CMSIS\Include\core_cm4_simd.h)(0x532BF7C2)
+I (D:\keil\ARM\Inc\ST\STM32F4xx\system_stm32f4xx.h)(0x532BF35A)
+I (..\App\stm32f4xx_conf.h)(0x559F253F)
+I (..\LIB\INC\stm32f4xx_crc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_exti.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_gpio.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_rcc.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_syscfg.h)(0x55279D33)
+I (..\LIB\INC\stm32f4xx_usart.h)(0x55279D33)
+I (..\LIB\INC\misc.h)(0x55279D33)
+I (..\App\BSP\lcd_ili9325.h)(0x559F33DA)
+F (..\emWin\Config\GUIConf.c)(0x559F3752)(-c --cpu Cortex-M4 -D__MICROLIB -g -O0 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib-I D:\keil\ARM\RV31\INC-I D:\keil\ARM\CMSIS\Include-I D:\keil\ARM\Inc\ST\STM32F4xx-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\guiconf.o --omf_browse ..\obj\guiconf.crf --depend ..\obj\guiconf.d)
+I (..\emWin\inc\GUI.h)(0x52E7F27F)
+I (..\emWin\inc\GUI_ConfDefaults.h)(0x52E7F27F)
+I (..\emWin\Config\GUIConf.h)(0x52E7F264)
+I (..\emWin\inc\GUI_Type.h)(0x52E7F27F)
+I (..\emWin\inc\LCD.h)(0x52E7F27F)
+I (..\emWin\inc\Global.h)(0x52E7F27E)
+I (..\emWin\inc\GUI_Version.h)(0x52E7F27F)
+F (..\emWin\Config\GUIConf.h)(0x52E7F264)()
+F (..\emWin\Config\GUIDRV_Template.c)(0x559F3FA2)(-c --cpu Cortex-M4 -D__MICROLIB -g -O0 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib-I D:\keil\ARM\RV31\INC-I D:\keil\ARM\CMSIS\Include-I D:\keil\ARM\Inc\ST\STM32F4xx-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\guidrv_template.o --omf_browse ..\obj\guidrv_template.crf --depend ..\obj\guidrv_template.d)
+I (D:\keil\ARM\ARMCC\include\stddef.h)(0x51C7C554)
+I (..\emWin\inc\LCD_Private.h)(0x559F2836)
+I (..\emWin\inc\LCD_Protected.h)(0x52E7F27F)
+I (..\emWin\inc\LCD.h)(0x52E7F27F)
+I (..\emWin\inc\GUI_ConfDefaults.h)(0x52E7F27F)
+I (..\emWin\Config\GUIConf.h)(0x52E7F264)
+I (..\emWin\inc\Global.h)(0x52E7F27E)
+I (..\emWin\inc\GUI.h)(0x52E7F27F)
+I (..\emWin\inc\GUI_Type.h)(0x52E7F27F)
+I (..\emWin\inc\GUI_Version.h)(0x52E7F27F)
+I (..\emWin\inc\GUI_Private.h)(0x52E7F27F)
+I (..\emWin\inc\GUI_Debug.h)(0x52E7F27F)
+I (..\emWin\inc\WM_GUI.h)(0x52E7F27E)
+I (..\emWin\inc\LCD_ConfDefaults.h)(0x559F2913)
+F (..\emWin\Config\GUIDRV_Template.h)(0x52E7F264)()
+F (..\emWin\Config\LCDConf_FlexColor_Template.h)(0x52E7F264)()
+F (..\emWin\Config\LCDConf_FlexColor_Template.c)(0x559F3D23)(-c --cpu Cortex-M4 -D__MICROLIB -g -O0 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib-I D:\keil\ARM\RV31\INC-I D:\keil\ARM\CMSIS\Include-I D:\keil\ARM\Inc\ST\STM32F4xx-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\lcdconf_flexcolor_template.o --omf_browse ..\obj\lcdconf_flexcolor_template.crf --depend ..\obj\lcdconf_flexcolor_template.d)
+I (..\emWin\inc\GUI.h)(0x52E7F27F)
+I (..\emWin\inc\GUI_ConfDefaults.h)(0x52E7F27F)
+I (..\emWin\Config\GUIConf.h)(0x52E7F264)
+I (..\emWin\inc\GUI_Type.h)(0x52E7F27F)
+I (..\emWin\inc\LCD.h)(0x52E7F27F)
+I (..\emWin\inc\Global.h)(0x52E7F27E)
+I (..\emWin\inc\GUI_Version.h)(0x52E7F27F)
+I (..\emWin\inc\GUIDRV_FlexColor.h)(0x52E7F27F)
+I (..\App\BSP\lcd_ili9325.h)(0x559F33DA)
+F (..\emWin\OS\GUI_X.c)(0x559F2F04)(-c --cpu Cortex-M4 -D__MICROLIB -g -O0 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib-I D:\keil\ARM\RV31\INC-I D:\keil\ARM\CMSIS\Include-I D:\keil\ARM\Inc\ST\STM32F4xx-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\gui_x.o --omf_browse ..\obj\gui_x.crf --depend ..\obj\gui_x.d)
+I (..\emWin\inc\GUI.h)(0x52E7F27F)
+I (..\emWin\inc\GUI_ConfDefaults.h)(0x52E7F27F)
+I (..\emWin\Config\GUIConf.h)(0x52E7F264)
+I (..\emWin\inc\GUI_Type.h)(0x52E7F27F)
+I (..\emWin\inc\LCD.h)(0x52E7F27F)
+I (..\emWin\inc\Global.h)(0x52E7F27E)
+I (..\emWin\inc\GUI_Version.h)(0x52E7F27F)
+F (..\emWin\Lib\STemWin522_CM4_Keil.lib)(0x52E7F277)()

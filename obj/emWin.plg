@@ -1,0 +1,14 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Administrator\Desktop\Freq\PRO\emWin.uvproj
+Project File Date:  12/26/2015
+
+<h2>Output:</h2>
+Build target 'Freq'
+linking...
+Program Size: Code=43864 RO-data=1112 RW-data=412 ZI-data=108740  
+FromELF: creating hex file...
+"..\obj\emWin.axf" - 0 Errors, 0 Warning(s).
