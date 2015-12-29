@@ -11,13 +11,12 @@ static  CPU_STK  AppTaskTASK2Stk[APP_CFG_TASK_TASK2_STK_SIZE];
 static  CPU_STK  AppTaskTASK3Stk[APP_CFG_TASK_TASK3_STK_SIZE];
 
 /***************************************************************/
-PQueueInfo pUart3QueueInfo;
+PQueueInfo pUart3QueueInfo;//串口缓冲
+/***************************************************************/
 
-char yuliang[1024];
-unsigned char takeflag =0;
-int yuliangcishu=0;
-extern unsigned char yuliang_buf[20];
-extern char clearbuffer;
+extern int rainnumber;
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 //开始任务
 void  AppTaskStart (void *p_arg)
@@ -80,17 +79,6 @@ void  AppTaskStart (void *p_arg)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 //用户任务1
 void task1(void)
@@ -98,7 +86,8 @@ void task1(void)
 	OS_ERR      err;
 	while(1)
 	{
-		OSTimeDlyHMSM(0,0,5,0,OS_OPT_TIME_DLY,&err);
+		OSTimeDlyHMSM(0,0,1,0,OS_OPT_TIME_DLY,&err);
+		//printf("number:%d\r\n",rainnumber);
 	}
 }
 
@@ -110,9 +99,13 @@ void task2(void)
 	OS_ERR      err;
     while(1)
     {
-		OSTimeDlyHMSM(0,0,1,0,OS_OPT_TIME_DLY,&err);
+		OSTimeDlyHMSM(0,0,5,0,OS_OPT_TIME_DLY,&err);
     }
 }
+
+
+
+
 
  
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -120,57 +113,30 @@ void task3(void)
 {
 	OS_ERR      err;
 	
-	pUart3QueueInfo = malloc(sizeof(CQueueInfo));//申请内存
+	pUart3QueueInfo = malloc(sizeof(CQueueInfo));//申请内存.串口缓冲
 	memset(pUart3QueueInfo, 0, sizeof(CQueueInfo));
-
-	
 	bsp_io_init();//IO口
 	UsartConfig();//串口设置配置
 	SW_12V(1);//电源
-	SW_5V(1);//正负电源，用于检测回波Z
-	FreqModuleInit();//测频率模块初始化
-	LTC2402Init();
-	yuliang_gpio();
-	voltage_adc_init();
+	SW_5V(1);//正负电源，用于检测回波
 	
-				
-	GetFreq(1);
-	SW_VW(1);
+/*********************************************************/
+	voltage_adc_init();//内部电压
+	FreqModuleInit();//测频率模块初始化
+	GetFreq(1);//获取频率
+	LTC2402Init();//温度采集初始化
+	rain_gpio();//雨量GPIO初始化
+/********************************************************/
+	
+	RTC_Config(inner);
+	set_alarm(0,0,1);
+	printf("%s\r\n",get_time2());
+	
 	while(1)
 	{
-		AppMain();
-		
-		if(takeflag == 1)
-		{
-			takeflag =0;
-				
-			strcat(yuliang,yuliang_buf);
-			
-			yuliangcishu++;
-			if(yuliangcishu >70)
-				{yuliangcishu = 0;memset(yuliang,0,1024);}
-		}
-		
-		if(clearbuffer == 1)
-		{
-			clearbuffer =0;
-			takeflag = 0;
-			yuliangcishu = 0;
-			memset(yuliang,0,1024);
-		}
-		OSTimeDlyHMSM(0,0,0,10,OS_OPT_TIME_DLY,&err);//10毫秒检测一次是否传输完毕
+		AppMain();//假如有串口数据
+		OSTimeDlyHMSM(0,0,0,10,OS_OPT_TIME_DLY,&err);
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
 
 

@@ -58,24 +58,32 @@
 */
 
 
-/*------stlib---------*/
+/*------stlib------------------------------*/
 #include  "stm32f4xx.h"
-/*------bsp-----------*/
+#include  "type32.h"
+#include  "archDef.h"
+#include  "Protocol.h"
+/*------bsp--------------------------------*/
 #include  "bsp.h"
 #include  "bsp_init.h"
 #include  "bsp_usart.h"
-#include  "bsp_ltc2402.h"
 #include  "bsp_sst25vf064.h"
 #include  "bsp_rtc.h"
 #include  "bsp_io_control.h"
-#include  "bsp_485.h"
-#include  "flash.h"
-
-/*------app-----------*/
+#include  "bsp_adc.h"
+#include  "bsp_flash.h"
+#include  "usart_serial.h"
+/*------app--------------------------------*/
 #include  "app.h"
 #include  "FreqMeasurement.h"
 #include  "Tools.h"
+#include  "Rain.h"
+#include  "Temperature.h"
 #include  "AppMain.h"
+
+
+
+
 
 /*
 *********************************************************************************************************

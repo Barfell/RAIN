@@ -236,6 +236,10 @@ void TIM3_IRQHandler(void)
 }
 
 
+
+
+
+//低功耗串口唤醒
 void EXTI9_5_IRQHandler(void)
 {
 	OSIntEnter();
@@ -251,22 +255,10 @@ void EXTI9_5_IRQHandler(void)
 
 
 
-void EXTI0_IRQHandler(void)
-{
-	int i;
-	OSIntEnter();
-	if(EXTI_GetITStatus(EXTI_Line0) != RESET)
-	{
-		EXTI_ClearITPendingBit(EXTI_Line0);
-		if(takeflag == 0)
-		{
-			memset(yuliang_buf,0,25);
-			strcat(yuliang_buf,"20");
-			strcat(yuliang_buf,get_time());
-			//printf("%s",yuliang_buf);
-			takeflag = 1;//读取了一此
-		}
-		
-	}
-	OSIntExit();
-}
+
+
+
+
+
+
+

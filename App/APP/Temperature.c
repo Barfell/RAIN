@@ -1,5 +1,5 @@
 #include "includes.h"
-
+//测量温度使用
 void SPI1_Init(void)
 {	 
 	GPIO_InitTypeDef  GPIO_InitStructure;
@@ -92,7 +92,7 @@ void LTC2402Init(void)
 //获取电阻值
 double LTC2402_GetResistance(unsigned char channel)
 {
-    unsigned char u8charresbuf[4];
+    unsigned char u8charresbuf[4]={'\0'};
     unsigned char EOC = 0;
     u32 u32resbuf = 0;
     double convertionresult = 0;
@@ -139,7 +139,7 @@ double LTC2402_GetResistance(unsigned char channel)
 
 
 //计算温度
-double GetNTCTemperature(double NTCRes)
+double GetTemperature(double NTCRes)
 {
 	double fTem;
 	if(NTCRes>PT_Min && NTCRes < PT_Max)

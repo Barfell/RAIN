@@ -1,4 +1,4 @@
-#include  <includes.h>
+#include <includes.h>
 unsigned char PulseNUM = 0;//发射脉冲个数
 
 //用于激发振弦vw_tr
@@ -98,7 +98,7 @@ double CalDisplacement(double Freq,double T)
 	Displacement = (DigitsNEXT-DigitsPRE)*G + (T - 26.300000)*((DigitsNEXT * TM) +TB)*G;
 	return Displacement;
 }
-//使用前初始化
+//使用前初始化,初始化之后直接使用GetFreq获取频率
 void FreqModuleInit(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
@@ -229,7 +229,6 @@ void TranPulse(unsigned int freq,unsigned char num)
 double GetFreq(unsigned char ch)
 {
 	unsigned int f = 0;
-	unsigned char i = 0;
 	unsigned char times = 0;
 	OS_ERR		err;
 	SW_VW(ch);//选择通道
@@ -343,4 +342,11 @@ void OutPutFreqSet(unsigned int freq)
 		}
 	TIM_OC3Init(TIM3,&TIM_OCInitStructure);
 }
+
+
+
+
+
+
+
 

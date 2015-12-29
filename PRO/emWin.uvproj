@@ -139,7 +139,7 @@
             <RestoreTracepoints>1</RestoreTracepoints>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>7</TargetSelection>
+          <TargetSelection>13</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -153,7 +153,7 @@
             <PeripheralDll></PeripheralDll>
             <PeripheralDllArguments></PeripheralDllArguments>
             <InitializationFile></InitializationFile>
-            <Driver>Segger\JL2CM3.dll</Driver>
+            <Driver>STLink\ST-LINKIII-KEIL_SWO.dll</Driver>
           </TargetDlls>
         </DebugOption>
         <Utilities>
@@ -351,7 +351,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F4XX</Define>
               <Undefine></Undefine>
-              <IncludePath>..\App;..\App\BSP;..\LIB\INC;..\LIB\SRC;..\emWin\Config;..\emWin\inc;..\emWin\Lib;..\uCOSIII\uC-CPU;..\uCOSIII\uC-LIB;..\uCOSIII\uC-Serial\Driver;..\uCOSIII\uC-Serial\Line;..\uCOSIII\uC-Serial\Source;..\uCOSIII\uC-Serial\OS;..\uCOSIII\uCOS-III\Ports;..\uCOSIII\uCOS-III\Source;..\emWin\Demo;..\App\APP;..\Protocol\drv\inc;..\Protocol\drv\src;..\Protocol\Protocol;..\Protocol\sys</IncludePath>
+              <IncludePath>..\App;..\App\BSP;..\LIB\INC;..\LIB\SRC;..\emWin\Config;..\emWin\inc;..\emWin\Lib;..\uCOSIII\uC-CPU;..\uCOSIII\uC-LIB;..\uCOSIII\uC-Serial\Driver;..\uCOSIII\uC-Serial\Line;..\uCOSIII\uC-Serial\Source;..\uCOSIII\uC-Serial\OS;..\uCOSIII\uCOS-III\Ports;..\uCOSIII\uCOS-III\Source;..\emWin\Demo;..\App\APP;..\Protocol</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -458,14 +458,49 @@
               <FilePath>..\App\APP\FreqMeasurement.c</FilePath>
             </File>
             <File>
-              <FileName>app.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\App\APP\app.h</FilePath>
+              <FileName>Rain.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\APP\Rain.c</FilePath>
+            </File>
+            <File>
+              <FileName>Temperature.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\APP\Temperature.c</FilePath>
             </File>
             <File>
               <FileName>Tools.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\App\APP\Tools.c</FilePath>
+            </File>
+            <File>
+              <FileName>app.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\APP\app.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Protocol</GroupName>
+          <Files>
+            <File>
+              <FileName>kernel.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Protocol\kernel.c</FilePath>
+            </File>
+            <File>
+              <FileName>Protocol.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Protocol\Protocol.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart_serial.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Protocol\usart_serial.c</FilePath>
+            </File>
+            <File>
+              <FileName>AppMain.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Protocol\AppMain.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -483,11 +518,6 @@
               <FilePath>..\App\BSP\bsp_usart.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_ltc2402.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\App\BSP\bsp_ltc2402.c</FilePath>
-            </File>
-            <File>
               <FileName>bsp_sst25vf064.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\App\BSP\bsp_sst25vf064.c</FilePath>
@@ -498,24 +528,19 @@
               <FilePath>..\App\BSP\bsp_rtc.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_485.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\App\BSP\bsp_485.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_cpld4064.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\App\BSP\bsp_cpld4064.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_gprs.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\App\BSP\bsp_gprs.c</FilePath>
-            </File>
-            <File>
               <FileName>bsp_io_control.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\App\BSP\bsp_io_control.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\BSP\bsp_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\BSP\bsp_flash.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_it.c</FileName>
@@ -523,29 +548,14 @@
               <FilePath>..\App\BSP\stm32f4xx_it.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\App\BSP\stm32f4xx.h</FilePath>
-            </File>
-            <File>
               <FileName>stm32f4xx_conf.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\App\BSP\stm32f4xx_conf.h</FilePath>
             </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>CMSIS</GroupName>
-          <Files>
             <File>
-              <FileName>system_stm32f4xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\App\BSP\system_stm32f4xx.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_stm32f40_41xxx.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\LIB\startup_stm32f40_41xxx.s</FilePath>
+              <FileName>stm32f4xx.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\App\BSP\stm32f4xx.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -621,6 +631,26 @@
               <FileName>stm32f4xx_adc.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LIB\SRC\stm32f4xx_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LIB\SRC\stm32f4xx_flash.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>CMSIS</GroupName>
+          <Files>
+            <File>
+              <FileName>system_stm32f4xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\BSP\system_stm32f4xx.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_stm32f40_41xxx.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\LIB\startup_stm32f40_41xxx.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -836,41 +866,6 @@
               <FileName>lib_str.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\uCOSIII\uC-LIB\lib_str.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Protocol</GroupName>
-          <Files>
-            <File>
-              <FileName>AppMain.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Protocol\Protocol\AppMain.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>drv</GroupName>
-          <Files>
-            <File>
-              <FileName>Protocol.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Protocol\drv\src\Protocol.c</FilePath>
-            </File>
-            <File>
-              <FileName>usart_serial.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Protocol\drv\src\usart_serial.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>sys</GroupName>
-          <Files>
-            <File>
-              <FileName>kernel.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Protocol\sys\kernel.c</FilePath>
             </File>
           </Files>
         </Group>

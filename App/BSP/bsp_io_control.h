@@ -11,7 +11,7 @@ void SW_VW_TRCN(unsigned char onOroff);
 
 void SW_VW(unsigned char onOroff);
 
-void yuliang_gpio(void);
+void rain_gpio(void);
 
 #endif
 

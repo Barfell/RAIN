@@ -67,7 +67,7 @@ void read_dev_id(unsigned char* DevID_string)
 	for(i=0;i<12;i++)
 		{
 			hextostr(DevID_tmp,IDtemp[i]);
-			strcat(DevID_string,DevID_tmp);
+			strcat((char *)DevID_string,(char *)DevID_tmp);
 			memset(DevID_tmp,'\0',4);
 		}
 }

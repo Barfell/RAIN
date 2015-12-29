@@ -2,14 +2,15 @@
 
 STATIC U32 g_u32Uart3RevCount = 0;
 STATIC U8 g_u8LastValue;
-extern PQueueInfo pUart3QueueInfo;
+extern PQueueInfo pUart3QueueInfo;//串口环形队列
+
 unsigned char preData=0;
 unsigned char finishflag = 0;//主机下发命令结束标志
 
 
 VOID USART1_IRQHandler(VOID)
 { 
-	U8 u8Value;
+	U8 u8Value = 0;
 	OSIntEnter();//进入中断
 	
 	/* 串口1接收中断处理 */

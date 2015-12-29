@@ -1,4 +1,5 @@
 #include "includes.h"
+//测量内部的ADC
 void voltage_adc_init(void)
 {
 	GPIO_InitTypeDef  		GPIO_InitStructure;
@@ -53,3 +54,4 @@ double get_dev_voltage(unsigned int value)
 	dev_voltage = dev_voltage/x;
 	return dev_voltage;
 }
+

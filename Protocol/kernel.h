@@ -1,10 +1,7 @@
 #ifndef __BSP_H
 #define __BSP_H	
 
-#include "tool.h"
-#include "stm32f4xx.h"
-#include "Protocol.h"
-#include "usart_serial.h"
+#include "includes.h"
 
 enum
 {

@@ -1,6 +1,6 @@
 #ifndef _PROTOCOL_H_
 #define _PROTOCOL_H_
-#include "kernel.h"
+#include "includes.h"
 
 #define MAXSIZE	200
 

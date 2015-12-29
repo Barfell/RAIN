@@ -1,6 +1,7 @@
 #ifndef __USART_SERIAL_H                           
 #define __USART_SERIAL_H
 
+#include "includes.h"
 /* 头文件处理 */
 #define USER_UARTSIZE	800
 /* 全局变量声明 */

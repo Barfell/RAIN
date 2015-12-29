@@ -1,5 +1,4 @@
-#include "AppMain.h"
-#include "Tools.h"
+
 #include  <includes.h>
 
 #define APPCOMMUNICATE_PORT USART1
@@ -52,30 +51,25 @@ CONST U8 szDeviceName[] = "15001";
 CONST U8 szDeviceInfo[] = "SCT";
 CONST U8 szErrorInfo1[] = "Flow error";
 CONST U8 szErrorInfo2[] = "Command error";
-CONST U8 szInfo1[] = "PROTOL";
-CONST U8 szInfo2[] = "UNPROTOL";
-CONST U8 szEndInfo[] = "\r\n";
-
+CONST U8 szInfo1[]      = "PROTOL";
+CONST U8 szInfo2[]      = "UNPROTOL";
+CONST U8 szEndInfo[]    = "\r\n";
 CONST U8 szInqueryCmd[] = "DT INFO\r\n";
-	
-U8 szInquery1Cmd[] = "DT XXXXX INFO\r\n";
-U8 szConfigureInfo1[] = "DT xxxxx CONF UNPROTOCOL TYPE\r\n";
+U8 szInquery1Cmd[]      = "DT XXXXX INFO\r\n";
+U8 szConfigureInfo1[]   = "DT xxxxx CONF UNPROTOCOL TYPE\r\n";
+U8 szConfigureInfo2[]   = "DT xxxxx CONF PROTOCOL TYPE\r\n";
+U8 szCmd1[]             = "DT XXXXX READ ALL\r\n";
+U8 szCmd2[]             = "DT XXXXX READ X\r\n";
+U8 szCmd3[]             = "DT XXXXX TIME xxxxxx\r\n";
+U8 szResponse[]         = "#SCTXXXXX SUCCESS\r\n";
 
-U8 szConfigureInfo2[] = "DT xxxxx CONF PROTOCOL TYPE\r\n";
-U8 szCmd1[] = "DT XXXXX READ ALL\r\n";
-U8 szCmd2[] = "DT XXXXX READ X\r\n";
-
-U8 szCmd3[] = "DT XXXXX TIME xxxxxx\r\n";
-
-U8 szResponse[] = "#SCTXXXXX SUCCESS\r\n";
-
-extern PQueueInfo pUart3QueueInfo;
+//串口相关缓冲
+extern PQueueInfo pUart3QueueInfo;//串口环形队列
 extern unsigned char finishflag;
 
-extern unsigned char takeflag;
-extern char yuliang[1024];
-char clearbuffer = 0;
-
+//雨量相关缓冲
+extern int rainnumber;
+extern char rain[6144];
 
 STATIC VOID AppCommunicatePort(USART_TypeDef* USARTx, U8 *pBuf, U16 u16Length)
 {	
@@ -215,25 +209,56 @@ STATIC VOID GetCurrentAppConfigure(PProtocolInfo pProtocolInfo)
 
 VOID HandleAllModule(PProtocolInfo pProtocolInfo)
 {
-	U8 szData[2048] = {0};
+	U8 szData[6444] = {0};
+	char timebuf[20]={'\0'};
+	char szId[50];
+	double f1 = 0.0;
+	double f2 = 0.0;
+	double f3 = 0.0;
+	double f4 = 0.0;
+	double f5 = 0.0;
+	double f6 = 0.0;
+	double f7 = 0.0;
+	double f8 = 0.0;
+	double t1 = 0.0;
+	double t2 = 0.0;
+	double t3 = 0.0;
+	double t4 = 0.0;
+	double t5 = 0.0;
+	double t6 = 0.0;
+	double t7 = 0.0;
+	double t8 = 0.0;
+	double voltage = 0.0;
 
-    char timebuf[20]={'\0'};
-		
-	U8 szId[50];
-	
-	read_dev_id(szId);
+	read_dev_id(szId);//id
+	strcat(timebuf,get_time2());//time
+	voltage = get_dev_voltage(get_adc_value());//v
+	//freq
+	f1 = GetFreq(1);
+	f2 = GetFreq(2);
+	f3 = GetFreq(3);
+	f4 = GetFreq(4);
+	f5 = GetFreq(5);
+	f6 = GetFreq(6);
+	f7 = GetFreq(7);
+	f8 = GetFreq(8);
+	//temperture;
+	t1 = GetTemperature(LTC2402_GetResistance(1));
+	t2 = GetTemperature(LTC2402_GetResistance(2));
+	t3 = GetTemperature(LTC2402_GetResistance(3));
+	t4 = GetTemperature(LTC2402_GetResistance(4));
+	t5 = GetTemperature(LTC2402_GetResistance(5));
+	t6 = GetTemperature(LTC2402_GetResistance(6));
+	t7 = GetTemperature(LTC2402_GetResistance(7));
+	t8 = GetTemperature(LTC2402_GetResistance(8));
+//打包全部数据
+sprintf((char *)szData, "#SCT%s=0x%s %s V:%f M1=%s P1=0 M2=%f P2=%f M3=%f P3=%f M4=%f P4=%f M5=%f P5=%f M6=%f P6=%f M7=%f P7=%f M8=%f P8=%f%s",\
+szDeviceName, szId , timebuf , voltage , rain, f2,t2,f3,t3,f4,t4,f5,t5,f6,t6,f7,t7,f8,t8,szEndInfo);
+//读取完之后立即清除内存，用于记录下一个雨量
+	rainnumber = 0;
+	memset(rain,'\0',6144);
 
-strcat(timebuf,"20"); 
-strcat(timebuf,get_time2()); 
-
-sprintf(szData, "#SCT%s=0x%s %s V:%f M1=",szDeviceName, szId,timebuf,get_dev_voltage(get_adc_value()));
-strcat(szData,yuliang);
-strcat(szData," P1=0 M2=0 P2=0 M3=0 P3=0 M4=0 P4=0 M5=0 P5=0 M6=0 P6=0 M7=0 P7=0 M8=0 P8=0");
-strcat((char *)szData,szEndInfo);
-sentusartdata(szData);
-
-	clearbuffer = 1;
-	//HandleDataPackage(szData, strlen((char *)szData), pProtocolInfo);
+HandleDataPackage(szData, strlen((char *)szData), pProtocolInfo);
 }
 
 STATIC VOID HandleIndividualModule(S8 s8Value, PProtocolInfo pProtocolInfo)
@@ -245,7 +270,7 @@ STATIC VOID HandleIndividualModule(S8 s8Value, PProtocolInfo pProtocolInfo)
 	
 	
 	read_dev_id(szId);
-	sprintf((char *)szData, "#SCT%s=0x%s %s V:%f M%d=%f P%d= 0 %s", szDeviceName, szId,get_time(),get_dev_voltage(get_adc_value()),GetFreq(u8Value), u8Value, u8Value, szEndInfo);
+	sprintf((char *)szData, "#SCT%s=0x%s %s V:%f M%d=%f P%d= 0 %s", szDeviceName, szId,get_time(),get_dev_voltage(get_adc_value()), u8Value,GetFreq(u8Value), u8Value, szEndInfo);
 	HandleDataPackage(szData, strlen((char *)szData), pProtocolInfo);
 }
 
