@@ -56,11 +56,11 @@ CONST U8 szInfo2[]      = "UNPROTOL";
 CONST U8 szEndInfo[]    = "\r\n";
 CONST U8 szInqueryCmd[] = "DT INFO\r\n";
 U8 szInquery1Cmd[]      = "DT XXXXX INFO\r\n";
-U8 szConfigureInfo1[]   = "DT xxxxx CONF UNPROTOCOL TYPE\r\n";
-U8 szConfigureInfo2[]   = "DT xxxxx CONF PROTOCOL TYPE\r\n";
+U8 szConfigureInfo1[]   = "DT XXXXX CONF UNPROTOCOL TYPE\r\n";
+U8 szConfigureInfo2[]   = "DT XXXXX CONF PROTOCOL TYPE\r\n";
 U8 szCmd1[]             = "DT XXXXX READ ALL\r\n";
 U8 szCmd2[]             = "DT XXXXX READ X\r\n";
-U8 szCmd3[]             = "DT XXXXX TIME xxxxxx\r\n";
+U8 szCmd3[]             = "DT XXXXX TIME xxxx-xx-xx-xx:xx:xx:x:x\r\n";
 U8 szResponse[]         = "#SCTXXXXX SUCCESS\r\n";
 
 //串口相关缓冲
@@ -68,8 +68,9 @@ extern PQueueInfo pUart3QueueInfo;//串口环形队列
 extern unsigned char finishflag;
 
 //雨量相关缓冲
-extern int rainnumber;
-extern char rain[6144];
+extern int RainNumber_RAM;
+extern char Rain_RAM[1024];
+extern int RainNumber_FLASH;
 
 STATIC VOID AppCommunicatePort(USART_TypeDef* USARTx, U8 *pBuf, U16 u16Length)
 {	
@@ -163,6 +164,8 @@ STATIC VOID HandleErrorFlowProc(PProtocolInfo pProtocolInfo)
 	AppCommunicatePort(APPCOMMUNICATE_PORT, szData, strlen((char *)szData));
 }
 
+
+
 STATIC VOID HandleErrorCmdProc(VOID)
 {
 	U8 szData[50] = {0};
@@ -177,6 +180,8 @@ STATIC VOID HandleErrorCmdProc(VOID)
 	AppCommunicatePort(APPCOMMUNICATE_PORT, szData, strlen((char *)szData));
 }
 
+
+//配置
 STATIC VOID GetCurrentAppConfigure(PProtocolInfo pProtocolInfo)
 {
 	U8 szData[100] = {0};
@@ -207,9 +212,17 @@ STATIC VOID GetCurrentAppConfigure(PProtocolInfo pProtocolInfo)
 	
 }
 
+
+
+
+
+
+//返回全部通道数据
 VOID HandleAllModule(PProtocolInfo pProtocolInfo)
 {
-	U8 szData[6444] = {0};
+	int RainNumInFlash = 0;//flash数据个数
+	int i;
+	char szData[4496] = {'\0'};
 	char timebuf[20]={'\0'};
 	char szId[50];
 	double f1 = 0.0;
@@ -251,24 +264,71 @@ VOID HandleAllModule(PProtocolInfo pProtocolInfo)
 	t6 = GetTemperature(LTC2402_GetResistance(6));
 	t7 = GetTemperature(LTC2402_GetResistance(7));
 	t8 = GetTemperature(LTC2402_GetResistance(8));
-//打包全部数据
-sprintf((char *)szData, "#SCT%s=0x%s %s V:%f M1=%s P1=0 M2=%f P2=%f M3=%f P3=%f M4=%f P4=%f M5=%f P5=%f M6=%f P6=%f M7=%f P7=%f M8=%f P8=%f%s",\
-szDeviceName, szId , timebuf , voltage , rain, f2,t2,f3,t3,f4,t4,f5,t5,f6,t6,f7,t7,f8,t8,szEndInfo);
-//读取完之后立即清除内存，用于记录下一个雨量
-	rainnumber = 0;
-	memset(rain,'\0',6144);
+	
 
-HandleDataPackage(szData, strlen((char *)szData), pProtocolInfo);
+	RainNumInFlash = *(int *)(RAINNUMBERS_ADDR);//获取flash里面存储数量
+	//printf("RainNumInFlash:--%d--\r\n",RainNumInFlash);
+	
+	//判断flash里面是否有数据，假如没有数据，则直接上传ram里面的数据
+	if(RainNumInFlash == 0)//flash里面没有数据
+	{
+		//打包ram全部数据
+		sprintf((char *)szData, "#SCT%s=0x%s %s V:%f M1=%s P1=0 M2=%f P2=%f M3=%f P3=%f M4=%f P4=%f M5=%f P5=%f M6=%f P6=%f M7=%f P7=%f M8=%f P8=%f%s",\
+		szDeviceName, szId , timebuf , voltage , Rain_RAM, f2,t2,f3,t3,f4,t4,f5,t5,f6,t6,f7,t7,f8,t8,szEndInfo);
+		//读取完之后立即清除ram，用于记录下一个雨量
+		RainNumber_RAM = 0;
+		memset(Rain_RAM,'\0',1024);
+		HandleDataPackage(szData, strlen((char *)szData), pProtocolInfo);
+	}
+	
+	
+	else//flash里面有数据
+	{
+		//头
+		printf("#SCT%s=0x%s %s V:%f M1=",szDeviceName, szId , timebuf , voltage);
+
+		//flash
+		for(i = 0; i < RainNumInFlash/10; i++)
+		{
+		//strcat和sprintf函数都会判断插入的字符串是否断掉
+			memset(szData,'\0',4496);
+			sprintf(szData, "%s",flash_r_buffer(RAINDATA_ADDR + i*210, 210));//读出flash里面的数据
+			printf("%s",szData);
+		}
+		//ram
+		printf("%s",Rain_RAM);		
+		//尾
+		memset(szData,'\0',4496);
+		printf(" P1=0 M2=%f P2=%f M3=%f P3=%f M4=%f P4=%f M5=%f P5=%f M6=%f P6=%f M7=%f P7=%f M8=%f P8=%f%s",\
+		f2,t2,f3,t3,f4,t4,f5,t5,f6,t6,f7,t7,f8,t8,szEndInfo);		
+		
+		//清除
+		RainNumber_RAM = 0;
+		memset(Rain_RAM,'\0',1024);
+		
+		MCUFlashUnlock();			   
+		while(MCUFlashErase(FLASH_Sector_10) != 1);//sector10---清除雨量数据的数量
+		while(MCUFlashErase(FLASH_Sector_11) != 1);//sector11---清除雨量数据
+		while(FLASH_ProgramWord(RAINNUMBERS_ADDR, 0) != FLASH_COMPLETE);//数量为0
+		FLASH_Lock();
+	}
+	
+	
 }
 
+
+
+
+
+
+//返回单独通道数据
 STATIC VOID HandleIndividualModule(S8 s8Value, PProtocolInfo pProtocolInfo)
 {
 	U8 u8Value;
 	U8 szId[50];
 	U8 szData[150] = {0};
 	u8Value = s8Value - 0x30;
-	
-	
+
 	read_dev_id(szId);
 	sprintf((char *)szData, "#SCT%s=0x%s %s V:%f M%d=%f P%d= 0 %s", szDeviceName, szId,get_time(),get_dev_voltage(get_adc_value()), u8Value,GetFreq(u8Value), u8Value, szEndInfo);
 	HandleDataPackage(szData, strlen((char *)szData), pProtocolInfo);
@@ -276,49 +336,64 @@ STATIC VOID HandleIndividualModule(S8 s8Value, PProtocolInfo pProtocolInfo)
 
 
 //同步时间------------------------------------------------------------------------
-STATIC VOID HandleTIME(unsigned char* s8Value, PProtocolInfo pProtocolInfo)
+STATIC VOID HandleTIME(char* s8Value, PProtocolInfo pProtocolInfo)
 {
-//	unsigned char year;
-//	unsigned char mounth;
-//	unsigned char date;
-//	unsigned char hour;
-//	unsigned char min;
-//	unsigned char second;
-//	
-//	unsigned char s_year[3];
-//	unsigned char s_mounth[3];
-//	unsigned char s_date[3];
-//	unsigned char s_hour[3];
-//	unsigned char s_min[3];
-//	unsigned char s_second[3];
-//	
-//	strcat(s_year,*(s8Value+14));
-//	strcat(s_year,*(s8Value+14));
-//	
-//	strcat(s_mounth,*(s8Value+14));
-//	strcat(s_mounth,*(s8Value+14));
-//	
-//	strcat(s_date,*(s8Value+14));
-//	strcat(s_date,*(s8Value+14));
-//	
-//	strcat(s_hour,*(s8Value+14));
-//	strcat(s_hour,*(s8Value+14));
-//	
-//	strcat(s_min,*(s8Value+14));
-//	strcat(s_min,*(s8Value+14));
-//	
-//	strcat(s_second,*(s8Value+14));
-//	strcat(s_second,*(s8Value+14));
-//	
-//	year = atoi(s_year);
-//	mounth = atoi(s_mounth);
-//	date = atoi(s_date);
-//	min = atoi(s_min);
-//	second = atoi(s_second);
-//	hour = atoi(s_hour);
-//	
-//	set_time(year,mounth,date,0,RTC_H12_PM,hour,min,second);
-	printf("SCT15001 SUCCESS \r\n");
+	unsigned char year;
+	unsigned char mounth;
+	unsigned char date;
+	unsigned char hour;
+	unsigned char min;
+	unsigned char second;
+	
+	unsigned char week;
+	unsigned char ampm;
+	
+	 char s_year[8]    = {'\0'};
+	 char s_mounth[8]  = {'\0'};
+	 char s_date[8]    = {'\0'};
+	 char s_hour[8]    = {'\0'};
+	 char s_min[8]     = {'\0'};
+	 char s_second[8]  = {'\0'};
+	
+	
+	//"DT XXXXX TIME xxxx-xx-xx-xx:xx:xx:x:x\r\n"
+	s_year[0] = *(s8Value+16);
+	s_year[1] = *(s8Value+17);
+	
+	s_mounth[0] = *(s8Value+19);
+	s_mounth[1] = *(s8Value+20);
+	
+	s_date[0] = *(s8Value+22);
+	s_date[1] = *(s8Value+23);
+	
+	s_hour[0] = *(s8Value+25);
+	s_hour[1] = *(s8Value+26);
+	
+	s_min[0] = *(s8Value+28);
+	s_min[1] = *(s8Value+29);
+	
+	s_second[0] = *(s8Value+31);
+	s_second[1] = *(s8Value+32);
+	
+	week = *(s8Value+34) - 48;
+	ampm = *(s8Value+36) - 48;
+	
+	printf("s:y-%s m-%s d-%s h-%s m-%s s-%s\r\n",s_year,s_mounth,s_date,s_min,s_hour,s_second);
+	
+	year = atoi(s_year);
+	mounth = atoi(s_mounth);
+	date = atoi(s_date);
+	min = atoi(s_min);
+	second = atoi(s_second);
+	hour = atoi(s_hour);
+	
+	//set_time(0x15,0x12,0x28,0x14,0x50,0x01,0x01,RTC_H12_PM);
+	//printf("int:%d-%d-%d-%d-%d-%d week-%d ampm-%d\r\n",year,mounth,date,min,hour,second,week,ampm);
+	set_time(year,mounth,date,min,hour,second,week,ampm);
+	
+	printf("SCT15001 SUCCESS :%s \r\n",s8Value);
+	
+	
 	
 }
 
@@ -399,34 +474,37 @@ STATIC U8 HandleAppCmdProc(U8 *pBuf, U16 u16Length, PProtocolInfo pProtocolInfo)
 		}
 		else
 		{
+			//szConfigureInfo1
 			if((memcmp(pBuf, szConfigureInfo1, ARRAY_SIZEOF(szConfigureInfo1)) == 0) && (u16Length == ARRAY_SIZEOF(szConfigureInfo1)))
 			{
 				pProtocolInfo->u8ProtocolType = DT_UNPROTOCOL;
 				AppCommunicatePort(APPCOMMUNICATE_PORT, szResponse, ARRAY_SIZEOF(szResponse));		
 			}
+			//szConfigureInfo2
 			else if((memcmp(pBuf, szConfigureInfo2, ARRAY_SIZEOF(szConfigureInfo2)) == 0) && (u16Length == ARRAY_SIZEOF(szConfigureInfo2)))
 			{
 				pProtocolInfo->u8ProtocolType = DT_PROTOCOL;
 				AppCommunicatePort(APPCOMMUNICATE_PORT, szResponse, ARRAY_SIZEOF(szResponse));
 			}
-			
+			//szCmd1
 			else if((memcmp(pBuf, szCmd1, ARRAY_SIZEOF(szCmd1)) == 0) && (u16Length == ARRAY_SIZEOF(szCmd1)))
 			{
 				HandleAllModule(pProtocolInfo);
 			}
+			//szCmd2
 			else if((memcmp(pBuf, szCmd2, ARRAY_SIZEOF(szCmd2)) == 0) && (u16Length == ARRAY_SIZEOF(szCmd2)))
 			{
 				HandleIndividualModule(pBuf[14], pProtocolInfo);
 			}
-			
+			//szInquery1Cmd
 			else if((memcmp(pBuf, szInquery1Cmd, ARRAY_SIZEOF(szInquery1Cmd)) == 0) && (u16Length == ARRAY_SIZEOF(szInquery1Cmd)))
 			{
 				GetCurrentAppConfigure(pProtocolInfo);
 			}
-			
-			
+			//szCmd3
+			//"DT XXXXX TIME xxxx-xx-xx-xx:xx:xx\r\n";
 			//同步时间---------------------------------------------------------------------------
-			else if( memcmp(pBuf, szCmd3, 12) == 0) 
+			else if((memcmp(pBuf+9, "TIME", 4) == 0) && (u16Length == ARRAY_SIZEOF(szCmd3)))
 			{
 				HandleTIME(pBuf, pProtocolInfo);
 			}
@@ -501,7 +579,9 @@ VOID AppMain(VOID)
 	memcpy((char *)(szConfigureInfo2+3), szDeviceName, ARRAY_SIZEOF(szDeviceName));
 	memcpy((char *)(szCmd1+3), szDeviceName, ARRAY_SIZEOF(szDeviceName));
 	memcpy((char *)(szCmd2+3), szDeviceName, ARRAY_SIZEOF(szDeviceName));
+	memcpy((char *)(szCmd3+3), szDeviceName, ARRAY_SIZEOF(szDeviceName));
 	memcpy((char *)(szResponse+4), szDeviceName, ARRAY_SIZEOF(szDeviceName));
+	
 		if(GetQueueLength(pQueueInfo))
 		{ 
 			if(finishflag == 1)//一个命令传输结束

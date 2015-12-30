@@ -51,7 +51,7 @@ void iwatch_dog_init(void)
 	//IWDG_ReloadCounter(); //Î¹¹·
 }
 
-void read_dev_id(unsigned char* DevID_string)
+void read_dev_id(char* DevID_string)
 {
 	unsigned char DevID_tmp[4] = {'\0'};
 	unsigned char i,IDtemp[12];

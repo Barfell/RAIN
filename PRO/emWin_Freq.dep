@@ -50,16 +50,16 @@ I (E:\PROJECT\RAIN\App\bsp.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\BSP\bsp_init.h)(0x5673C598)
 I (E:\PROJECT\RAIN\App\BSP\bsp_usart.h)(0x567EAC78)
 I (E:\PROJECT\RAIN\App\BSP\bsp_sst25vf064.h)(0x5640B602)
-I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681DB19)
-I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x567E87F1)
+I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681F061)
+I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x56823E95)
 I (E:\PROJECT\RAIN\App\BSP\bsp_adc.h)(0x5681DF95)
-I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x5681DEF5)
+I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x56824DC3)
 I (E:\PROJECT\RAIN\Protocol\usart_serial.h)(0x5681E781)
 I (E:\PROJECT\RAIN\App\APP\app.h)(0x567EDD38)
 I (E:\PROJECT\RAIN\App\APP\FreqMeasurement.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\APP\Tools.h)(0x5673AE1E)
-I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5681E3A3)
-I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5681E5F9)
+I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5682442A)
+I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5682371D)
 I (E:\PROJECT\RAIN\Protocol\AppMain.h)(0x5681E71E)
 F (..\App\main.c)(0x5640B602)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
 I (E:\PROJECT\RAIN\App\includes.h)(0x5681E85B)
@@ -112,16 +112,16 @@ I (E:\PROJECT\RAIN\App\bsp.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\BSP\bsp_init.h)(0x5673C598)
 I (E:\PROJECT\RAIN\App\BSP\bsp_usart.h)(0x567EAC78)
 I (E:\PROJECT\RAIN\App\BSP\bsp_sst25vf064.h)(0x5640B602)
-I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681DB19)
-I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x567E87F1)
+I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681F061)
+I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x56823E95)
 I (E:\PROJECT\RAIN\App\BSP\bsp_adc.h)(0x5681DF95)
-I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x5681DEF5)
+I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x56824DC3)
 I (E:\PROJECT\RAIN\Protocol\usart_serial.h)(0x5681E781)
 I (E:\PROJECT\RAIN\App\APP\app.h)(0x567EDD38)
 I (E:\PROJECT\RAIN\App\APP\FreqMeasurement.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\APP\Tools.h)(0x5673AE1E)
-I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5681E3A3)
-I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5681E5F9)
+I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5682442A)
+I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5682371D)
 I (E:\PROJECT\RAIN\Protocol\AppMain.h)(0x5681E71E)
 F (..\App\os_app_hooks.c)(0x5640B602)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\os_app_hooks.o --omf_browse ..\obj\os_app_hooks.crf --depend ..\obj\os_app_hooks.d)
 I (E:\PROJECT\RAIN\uCOSIII\uCOS-III\Source\os.h)(0x5640B602)
@@ -145,7 +145,7 @@ F (..\App\lib_cfg.h)(0x5640B602)()
 F (..\App\os_app_hooks.h)(0x5640B602)()
 F (..\App\os_cfg.h)(0x5640B602)()
 F (..\App\os_cfg_app.h)(0x5640B602)()
-F (..\App\APP\app.c)(0x5681E472)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\app.o --omf_browse ..\obj\app.crf --depend ..\obj\app.d)
+F (..\App\APP\app.c)(0x568258B7)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\app.o --omf_browse ..\obj\app.crf --depend ..\obj\app.d)
 I (E:\PROJECT\RAIN\App\includes.h)(0x5681E85B)
 I (D:\Program Files\mdk\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Program Files\mdk\ARM\ARMCC\include\stdio.h)(0x51C7B744)
@@ -196,18 +196,18 @@ I (E:\PROJECT\RAIN\App\bsp.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\BSP\bsp_init.h)(0x5673C598)
 I (E:\PROJECT\RAIN\App\BSP\bsp_usart.h)(0x567EAC78)
 I (E:\PROJECT\RAIN\App\BSP\bsp_sst25vf064.h)(0x5640B602)
-I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681DB19)
-I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x567E87F1)
+I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681F061)
+I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x56823E95)
 I (E:\PROJECT\RAIN\App\BSP\bsp_adc.h)(0x5681DF95)
-I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x5681DEF5)
+I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x56824DC3)
 I (E:\PROJECT\RAIN\Protocol\usart_serial.h)(0x5681E781)
 I (E:\PROJECT\RAIN\App\APP\app.h)(0x567EDD38)
 I (E:\PROJECT\RAIN\App\APP\FreqMeasurement.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\APP\Tools.h)(0x5673AE1E)
-I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5681E3A3)
-I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5681E5F9)
+I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5682442A)
+I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5682371D)
 I (E:\PROJECT\RAIN\Protocol\AppMain.h)(0x5681E71E)
-F (..\App\APP\FreqMeasurement.c)(0x5681E501)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\freqmeasurement.o --omf_browse ..\obj\freqmeasurement.crf --depend ..\obj\freqmeasurement.d)
+F (..\App\APP\FreqMeasurement.c)(0x56823825)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\freqmeasurement.o --omf_browse ..\obj\freqmeasurement.crf --depend ..\obj\freqmeasurement.d)
 I (E:\PROJECT\RAIN\App\includes.h)(0x5681E85B)
 I (D:\Program Files\mdk\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Program Files\mdk\ARM\ARMCC\include\stdio.h)(0x51C7B744)
@@ -258,18 +258,18 @@ I (E:\PROJECT\RAIN\App\bsp.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\BSP\bsp_init.h)(0x5673C598)
 I (E:\PROJECT\RAIN\App\BSP\bsp_usart.h)(0x567EAC78)
 I (E:\PROJECT\RAIN\App\BSP\bsp_sst25vf064.h)(0x5640B602)
-I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681DB19)
-I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x567E87F1)
+I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681F061)
+I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x56823E95)
 I (E:\PROJECT\RAIN\App\BSP\bsp_adc.h)(0x5681DF95)
-I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x5681DEF5)
+I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x56824DC3)
 I (E:\PROJECT\RAIN\Protocol\usart_serial.h)(0x5681E781)
 I (E:\PROJECT\RAIN\App\APP\app.h)(0x567EDD38)
 I (E:\PROJECT\RAIN\App\APP\FreqMeasurement.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\APP\Tools.h)(0x5673AE1E)
-I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5681E3A3)
-I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5681E5F9)
+I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5682442A)
+I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5682371D)
 I (E:\PROJECT\RAIN\Protocol\AppMain.h)(0x5681E71E)
-F (..\App\APP\Rain.c)(0x5681E521)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\rain.o --omf_browse ..\obj\rain.crf --depend ..\obj\rain.d)
+F (..\App\APP\Rain.c)(0x56826019)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\rain.o --omf_browse ..\obj\rain.crf --depend ..\obj\rain.d)
 I (E:\PROJECT\RAIN\App\includes.h)(0x5681E85B)
 I (D:\Program Files\mdk\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Program Files\mdk\ARM\ARMCC\include\stdio.h)(0x51C7B744)
@@ -320,18 +320,18 @@ I (E:\PROJECT\RAIN\App\bsp.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\BSP\bsp_init.h)(0x5673C598)
 I (E:\PROJECT\RAIN\App\BSP\bsp_usart.h)(0x567EAC78)
 I (E:\PROJECT\RAIN\App\BSP\bsp_sst25vf064.h)(0x5640B602)
-I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681DB19)
-I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x567E87F1)
+I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681F061)
+I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x56823E95)
 I (E:\PROJECT\RAIN\App\BSP\bsp_adc.h)(0x5681DF95)
-I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x5681DEF5)
+I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x56824DC3)
 I (E:\PROJECT\RAIN\Protocol\usart_serial.h)(0x5681E781)
 I (E:\PROJECT\RAIN\App\APP\app.h)(0x567EDD38)
 I (E:\PROJECT\RAIN\App\APP\FreqMeasurement.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\APP\Tools.h)(0x5673AE1E)
-I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5681E3A3)
-I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5681E5F9)
+I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5682442A)
+I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5682371D)
 I (E:\PROJECT\RAIN\Protocol\AppMain.h)(0x5681E71E)
-F (..\App\APP\Temperature.c)(0x5681DF85)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\temperature.o --omf_browse ..\obj\temperature.crf --depend ..\obj\temperature.d)
+F (..\App\APP\Temperature.c)(0x5682371D)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\temperature.o --omf_browse ..\obj\temperature.crf --depend ..\obj\temperature.d)
 I (E:\PROJECT\RAIN\App\includes.h)(0x5681E85B)
 I (D:\Program Files\mdk\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Program Files\mdk\ARM\ARMCC\include\stdio.h)(0x51C7B744)
@@ -382,16 +382,16 @@ I (E:\PROJECT\RAIN\App\bsp.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\BSP\bsp_init.h)(0x5673C598)
 I (E:\PROJECT\RAIN\App\BSP\bsp_usart.h)(0x567EAC78)
 I (E:\PROJECT\RAIN\App\BSP\bsp_sst25vf064.h)(0x5640B602)
-I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681DB19)
-I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x567E87F1)
+I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681F061)
+I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x56823E95)
 I (E:\PROJECT\RAIN\App\BSP\bsp_adc.h)(0x5681DF95)
-I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x5681DEF5)
+I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x56824DC3)
 I (E:\PROJECT\RAIN\Protocol\usart_serial.h)(0x5681E781)
 I (E:\PROJECT\RAIN\App\APP\app.h)(0x567EDD38)
 I (E:\PROJECT\RAIN\App\APP\FreqMeasurement.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\APP\Tools.h)(0x5673AE1E)
-I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5681E3A3)
-I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5681E5F9)
+I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5682442A)
+I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5682371D)
 I (E:\PROJECT\RAIN\Protocol\AppMain.h)(0x5681E71E)
 F (..\App\APP\Tools.c)(0x5673AD2F)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\tools.o --omf_browse ..\obj\tools.crf --depend ..\obj\tools.d)
 I (E:\PROJECT\RAIN\App\includes.h)(0x5681E85B)
@@ -444,16 +444,16 @@ I (E:\PROJECT\RAIN\App\bsp.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\BSP\bsp_init.h)(0x5673C598)
 I (E:\PROJECT\RAIN\App\BSP\bsp_usart.h)(0x567EAC78)
 I (E:\PROJECT\RAIN\App\BSP\bsp_sst25vf064.h)(0x5640B602)
-I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681DB19)
-I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x567E87F1)
+I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681F061)
+I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x56823E95)
 I (E:\PROJECT\RAIN\App\BSP\bsp_adc.h)(0x5681DF95)
-I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x5681DEF5)
+I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x56824DC3)
 I (E:\PROJECT\RAIN\Protocol\usart_serial.h)(0x5681E781)
 I (E:\PROJECT\RAIN\App\APP\app.h)(0x567EDD38)
 I (E:\PROJECT\RAIN\App\APP\FreqMeasurement.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\APP\Tools.h)(0x5673AE1E)
-I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5681E3A3)
-I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5681E5F9)
+I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5682442A)
+I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5682371D)
 I (E:\PROJECT\RAIN\Protocol\AppMain.h)(0x5681E71E)
 F (..\App\APP\app.h)(0x567EDD38)()
 F (..\Protocol\kernel.c)(0x5673A586)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\kernel.o --omf_browse ..\obj\kernel.crf --depend ..\obj\kernel.d)
@@ -508,16 +508,16 @@ I (E:\PROJECT\RAIN\App\bsp.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\BSP\bsp_init.h)(0x5673C598)
 I (E:\PROJECT\RAIN\App\BSP\bsp_usart.h)(0x567EAC78)
 I (E:\PROJECT\RAIN\App\BSP\bsp_sst25vf064.h)(0x5640B602)
-I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681DB19)
-I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x567E87F1)
+I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681F061)
+I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x56823E95)
 I (E:\PROJECT\RAIN\App\BSP\bsp_adc.h)(0x5681DF95)
-I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x5681DEF5)
+I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x56824DC3)
 I (E:\PROJECT\RAIN\Protocol\usart_serial.h)(0x5681E781)
 I (E:\PROJECT\RAIN\App\APP\app.h)(0x567EDD38)
 I (E:\PROJECT\RAIN\App\APP\FreqMeasurement.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\APP\Tools.h)(0x5673AE1E)
-I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5681E3A3)
-I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5681E5F9)
+I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5682442A)
+I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5682371D)
 I (E:\PROJECT\RAIN\Protocol\AppMain.h)(0x5681E71E)
 F (..\Protocol\Protocol.c)(0x5681E773)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\protocol.o --omf_browse ..\obj\protocol.crf --depend ..\obj\protocol.d)
 I (E:\PROJECT\RAIN\App\includes.h)(0x5681E85B)
@@ -570,18 +570,18 @@ I (E:\PROJECT\RAIN\App\bsp.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\BSP\bsp_init.h)(0x5673C598)
 I (E:\PROJECT\RAIN\App\BSP\bsp_usart.h)(0x567EAC78)
 I (E:\PROJECT\RAIN\App\BSP\bsp_sst25vf064.h)(0x5640B602)
-I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681DB19)
-I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x567E87F1)
+I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681F061)
+I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x56823E95)
 I (E:\PROJECT\RAIN\App\BSP\bsp_adc.h)(0x5681DF95)
-I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x5681DEF5)
+I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x56824DC3)
 I (E:\PROJECT\RAIN\Protocol\usart_serial.h)(0x5681E781)
 I (E:\PROJECT\RAIN\App\APP\app.h)(0x567EDD38)
 I (E:\PROJECT\RAIN\App\APP\FreqMeasurement.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\APP\Tools.h)(0x5673AE1E)
-I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5681E3A3)
-I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5681E5F9)
+I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5682442A)
+I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5682371D)
 I (E:\PROJECT\RAIN\Protocol\AppMain.h)(0x5681E71E)
-F (..\Protocol\usart_serial.c)(0x567EB4D1)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\usart_serial.o --omf_browse ..\obj\usart_serial.crf --depend ..\obj\usart_serial.d)
+F (..\Protocol\usart_serial.c)(0x5681F191)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\usart_serial.o --omf_browse ..\obj\usart_serial.crf --depend ..\obj\usart_serial.d)
 I (E:\PROJECT\RAIN\Protocol\kernel.h)(0x5681E6B1)
 I (E:\PROJECT\RAIN\App\includes.h)(0x5681E85B)
 I (D:\Program Files\mdk\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
@@ -633,18 +633,18 @@ I (E:\PROJECT\RAIN\App\bsp.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\BSP\bsp_init.h)(0x5673C598)
 I (E:\PROJECT\RAIN\App\BSP\bsp_usart.h)(0x567EAC78)
 I (E:\PROJECT\RAIN\App\BSP\bsp_sst25vf064.h)(0x5640B602)
-I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681DB19)
-I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x567E87F1)
+I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681F061)
+I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x56823E95)
 I (E:\PROJECT\RAIN\App\BSP\bsp_adc.h)(0x5681DF95)
-I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x5681DEF5)
+I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x56824DC3)
 I (E:\PROJECT\RAIN\Protocol\usart_serial.h)(0x5681E781)
 I (E:\PROJECT\RAIN\App\APP\app.h)(0x567EDD38)
 I (E:\PROJECT\RAIN\App\APP\FreqMeasurement.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\APP\Tools.h)(0x5673AE1E)
-I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5681E3A3)
-I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5681E5F9)
+I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5682442A)
+I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5682371D)
 I (E:\PROJECT\RAIN\Protocol\AppMain.h)(0x5681E71E)
-F (..\Protocol\AppMain.c)(0x5681E8DE)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\appmain.o --omf_browse ..\obj\appmain.crf --depend ..\obj\appmain.d)
+F (..\Protocol\AppMain.c)(0x56825FEA)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\appmain.o --omf_browse ..\obj\appmain.crf --depend ..\obj\appmain.d)
 I (E:\PROJECT\RAIN\App\includes.h)(0x5681E85B)
 I (D:\Program Files\mdk\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Program Files\mdk\ARM\ARMCC\include\stdio.h)(0x51C7B744)
@@ -695,16 +695,16 @@ I (E:\PROJECT\RAIN\App\bsp.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\BSP\bsp_init.h)(0x5673C598)
 I (E:\PROJECT\RAIN\App\BSP\bsp_usart.h)(0x567EAC78)
 I (E:\PROJECT\RAIN\App\BSP\bsp_sst25vf064.h)(0x5640B602)
-I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681DB19)
-I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x567E87F1)
+I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681F061)
+I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x56823E95)
 I (E:\PROJECT\RAIN\App\BSP\bsp_adc.h)(0x5681DF95)
-I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x5681DEF5)
+I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x56824DC3)
 I (E:\PROJECT\RAIN\Protocol\usart_serial.h)(0x5681E781)
 I (E:\PROJECT\RAIN\App\APP\app.h)(0x567EDD38)
 I (E:\PROJECT\RAIN\App\APP\FreqMeasurement.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\APP\Tools.h)(0x5673AE1E)
-I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5681E3A3)
-I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5681E5F9)
+I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5682442A)
+I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5682371D)
 I (E:\PROJECT\RAIN\Protocol\AppMain.h)(0x5681E71E)
 F (..\App\BSP\bsp_init.c)(0x5681DC64)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\bsp_init.o --omf_browse ..\obj\bsp_init.crf --depend ..\obj\bsp_init.d)
 I (E:\PROJECT\RAIN\App\includes.h)(0x5681E85B)
@@ -757,16 +757,16 @@ I (E:\PROJECT\RAIN\App\bsp.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\BSP\bsp_init.h)(0x5673C598)
 I (E:\PROJECT\RAIN\App\BSP\bsp_usart.h)(0x567EAC78)
 I (E:\PROJECT\RAIN\App\BSP\bsp_sst25vf064.h)(0x5640B602)
-I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681DB19)
-I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x567E87F1)
+I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681F061)
+I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x56823E95)
 I (E:\PROJECT\RAIN\App\BSP\bsp_adc.h)(0x5681DF95)
-I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x5681DEF5)
+I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x56824DC3)
 I (E:\PROJECT\RAIN\Protocol\usart_serial.h)(0x5681E781)
 I (E:\PROJECT\RAIN\App\APP\app.h)(0x567EDD38)
 I (E:\PROJECT\RAIN\App\APP\FreqMeasurement.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\APP\Tools.h)(0x5673AE1E)
-I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5681E3A3)
-I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5681E5F9)
+I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5682442A)
+I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5682371D)
 I (E:\PROJECT\RAIN\Protocol\AppMain.h)(0x5681E71E)
 F (..\App\BSP\bsp_usart.c)(0x5681E00A)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\bsp_usart.o --omf_browse ..\obj\bsp_usart.crf --depend ..\obj\bsp_usart.d)
 I (E:\PROJECT\RAIN\App\BSP\stm32f4xx.h)(0x5640B602)
@@ -844,18 +844,18 @@ I (E:\PROJECT\RAIN\App\bsp.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\BSP\bsp_init.h)(0x5673C598)
 I (E:\PROJECT\RAIN\App\BSP\bsp_usart.h)(0x567EAC78)
 I (E:\PROJECT\RAIN\App\BSP\bsp_sst25vf064.h)(0x5640B602)
-I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681DB19)
-I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x567E87F1)
+I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681F061)
+I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x56823E95)
 I (E:\PROJECT\RAIN\App\BSP\bsp_adc.h)(0x5681DF95)
-I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x5681DEF5)
+I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x56824DC3)
 I (E:\PROJECT\RAIN\Protocol\usart_serial.h)(0x5681E781)
 I (E:\PROJECT\RAIN\App\APP\app.h)(0x567EDD38)
 I (E:\PROJECT\RAIN\App\APP\FreqMeasurement.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\APP\Tools.h)(0x5673AE1E)
-I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5681E3A3)
-I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5681E5F9)
+I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5682442A)
+I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5682371D)
 I (E:\PROJECT\RAIN\Protocol\AppMain.h)(0x5681E71E)
-F (..\App\BSP\bsp_rtc.c)(0x5681E50F)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\bsp_rtc.o --omf_browse ..\obj\bsp_rtc.crf --depend ..\obj\bsp_rtc.d)
+F (..\App\BSP\bsp_rtc.c)(0x5682309A)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\bsp_rtc.o --omf_browse ..\obj\bsp_rtc.crf --depend ..\obj\bsp_rtc.d)
 I (E:\PROJECT\RAIN\App\includes.h)(0x5681E85B)
 I (D:\Program Files\mdk\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Program Files\mdk\ARM\ARMCC\include\stdio.h)(0x51C7B744)
@@ -906,16 +906,16 @@ I (E:\PROJECT\RAIN\App\bsp.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\BSP\bsp_init.h)(0x5673C598)
 I (E:\PROJECT\RAIN\App\BSP\bsp_usart.h)(0x567EAC78)
 I (E:\PROJECT\RAIN\App\BSP\bsp_sst25vf064.h)(0x5640B602)
-I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681DB19)
-I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x567E87F1)
+I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681F061)
+I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x56823E95)
 I (E:\PROJECT\RAIN\App\BSP\bsp_adc.h)(0x5681DF95)
-I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x5681DEF5)
+I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x56824DC3)
 I (E:\PROJECT\RAIN\Protocol\usart_serial.h)(0x5681E781)
 I (E:\PROJECT\RAIN\App\APP\app.h)(0x567EDD38)
 I (E:\PROJECT\RAIN\App\APP\FreqMeasurement.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\APP\Tools.h)(0x5673AE1E)
-I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5681E3A3)
-I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5681E5F9)
+I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5682442A)
+I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5682371D)
 I (E:\PROJECT\RAIN\Protocol\AppMain.h)(0x5681E71E)
 F (..\App\BSP\bsp_io_control.c)(0x5681E478)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\bsp_io_control.o --omf_browse ..\obj\bsp_io_control.crf --depend ..\obj\bsp_io_control.d)
 I (E:\PROJECT\RAIN\App\includes.h)(0x5681E85B)
@@ -968,16 +968,16 @@ I (E:\PROJECT\RAIN\App\bsp.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\BSP\bsp_init.h)(0x5673C598)
 I (E:\PROJECT\RAIN\App\BSP\bsp_usart.h)(0x567EAC78)
 I (E:\PROJECT\RAIN\App\BSP\bsp_sst25vf064.h)(0x5640B602)
-I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681DB19)
-I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x567E87F1)
+I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681F061)
+I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x56823E95)
 I (E:\PROJECT\RAIN\App\BSP\bsp_adc.h)(0x5681DF95)
-I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x5681DEF5)
+I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x56824DC3)
 I (E:\PROJECT\RAIN\Protocol\usart_serial.h)(0x5681E781)
 I (E:\PROJECT\RAIN\App\APP\app.h)(0x567EDD38)
 I (E:\PROJECT\RAIN\App\APP\FreqMeasurement.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\APP\Tools.h)(0x5673AE1E)
-I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5681E3A3)
-I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5681E5F9)
+I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5682442A)
+I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5682371D)
 I (E:\PROJECT\RAIN\Protocol\AppMain.h)(0x5681E71E)
 F (..\App\BSP\bsp_adc.c)(0x5681DF75)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\bsp_adc.o --omf_browse ..\obj\bsp_adc.crf --depend ..\obj\bsp_adc.d)
 I (E:\PROJECT\RAIN\App\includes.h)(0x5681E85B)
@@ -1030,18 +1030,18 @@ I (E:\PROJECT\RAIN\App\bsp.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\BSP\bsp_init.h)(0x5673C598)
 I (E:\PROJECT\RAIN\App\BSP\bsp_usart.h)(0x567EAC78)
 I (E:\PROJECT\RAIN\App\BSP\bsp_sst25vf064.h)(0x5640B602)
-I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681DB19)
-I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x567E87F1)
+I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681F061)
+I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x56823E95)
 I (E:\PROJECT\RAIN\App\BSP\bsp_adc.h)(0x5681DF95)
-I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x5681DEF5)
+I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x56824DC3)
 I (E:\PROJECT\RAIN\Protocol\usart_serial.h)(0x5681E781)
 I (E:\PROJECT\RAIN\App\APP\app.h)(0x567EDD38)
 I (E:\PROJECT\RAIN\App\APP\FreqMeasurement.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\APP\Tools.h)(0x5673AE1E)
-I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5681E3A3)
-I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5681E5F9)
+I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5682442A)
+I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5682371D)
 I (E:\PROJECT\RAIN\Protocol\AppMain.h)(0x5681E71E)
-F (..\App\BSP\bsp_flash.c)(0x5681DF02)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\bsp_flash.o --omf_browse ..\obj\bsp_flash.crf --depend ..\obj\bsp_flash.d)
+F (..\App\BSP\bsp_flash.c)(0x56825880)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\bsp_flash.o --omf_browse ..\obj\bsp_flash.crf --depend ..\obj\bsp_flash.d)
 I (E:\PROJECT\RAIN\App\includes.h)(0x5681E85B)
 I (D:\Program Files\mdk\ARM\ARMCC\include\stdarg.h)(0x51C7B744)
 I (D:\Program Files\mdk\ARM\ARMCC\include\stdio.h)(0x51C7B744)
@@ -1092,16 +1092,16 @@ I (E:\PROJECT\RAIN\App\bsp.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\BSP\bsp_init.h)(0x5673C598)
 I (E:\PROJECT\RAIN\App\BSP\bsp_usart.h)(0x567EAC78)
 I (E:\PROJECT\RAIN\App\BSP\bsp_sst25vf064.h)(0x5640B602)
-I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681DB19)
-I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x567E87F1)
+I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681F061)
+I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x56823E95)
 I (E:\PROJECT\RAIN\App\BSP\bsp_adc.h)(0x5681DF95)
-I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x5681DEF5)
+I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x56824DC3)
 I (E:\PROJECT\RAIN\Protocol\usart_serial.h)(0x5681E781)
 I (E:\PROJECT\RAIN\App\APP\app.h)(0x567EDD38)
 I (E:\PROJECT\RAIN\App\APP\FreqMeasurement.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\APP\Tools.h)(0x5673AE1E)
-I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5681E3A3)
-I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5681E5F9)
+I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5682442A)
+I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5682371D)
 I (E:\PROJECT\RAIN\Protocol\AppMain.h)(0x5681E71E)
 F (..\App\BSP\stm32f4xx_it.c)(0x5681E500)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\stm32f4xx_it.o --omf_browse ..\obj\stm32f4xx_it.crf --depend ..\obj\stm32f4xx_it.d)
 I (E:\PROJECT\RAIN\App\BSP\stm32f4xx_it.h)(0x5640B602)
@@ -1155,16 +1155,16 @@ I (E:\PROJECT\RAIN\App\bsp.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\BSP\bsp_init.h)(0x5673C598)
 I (E:\PROJECT\RAIN\App\BSP\bsp_usart.h)(0x567EAC78)
 I (E:\PROJECT\RAIN\App\BSP\bsp_sst25vf064.h)(0x5640B602)
-I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681DB19)
-I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x567E87F1)
+I (E:\PROJECT\RAIN\App\BSP\bsp_rtc.h)(0x5681F061)
+I (E:\PROJECT\RAIN\App\BSP\bsp_io_control.h)(0x56823E95)
 I (E:\PROJECT\RAIN\App\BSP\bsp_adc.h)(0x5681DF95)
-I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x5681DEF5)
+I (E:\PROJECT\RAIN\App\BSP\bsp_flash.h)(0x56824DC3)
 I (E:\PROJECT\RAIN\Protocol\usart_serial.h)(0x5681E781)
 I (E:\PROJECT\RAIN\App\APP\app.h)(0x567EDD38)
 I (E:\PROJECT\RAIN\App\APP\FreqMeasurement.h)(0x5640B602)
 I (E:\PROJECT\RAIN\App\APP\Tools.h)(0x5673AE1E)
-I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5681E3A3)
-I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5681E5F9)
+I (E:\PROJECT\RAIN\App\APP\Rain.h)(0x5682442A)
+I (E:\PROJECT\RAIN\App\APP\Temperature.h)(0x5682371D)
 I (E:\PROJECT\RAIN\Protocol\AppMain.h)(0x5681E71E)
 F (..\App\BSP\stm32f4xx_conf.h)(0x5645500B)()
 F (..\App\BSP\stm32f4xx.h)(0x5640B602)()
@@ -1552,7 +1552,7 @@ I (E:\PROJECT\RAIN\LIB\INC\stm32f4xx_tim.h)(0x5640B602)
 I (E:\PROJECT\RAIN\LIB\INC\stm32f4xx_usart.h)(0x5640B602)
 I (E:\PROJECT\RAIN\LIB\INC\stm32f4xx_wwdg.h)(0x5640B602)
 I (E:\PROJECT\RAIN\LIB\INC\misc.h)(0x5640B602)
-F (..\LIB\startup_stm32f40_41xxx.s)(0x567EDA38)(--cpu Cortex-M4 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"--list ..\list\startup_stm32f40_41xxx.lst --xref -o ..\obj\startup_stm32f40_41xxx.o --depend ..\obj\startup_stm32f40_41xxx.d)
+F (..\LIB\startup_stm32f40_41xxx.s)(0x56822B0E)(--cpu Cortex-M4 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"--list ..\list\startup_stm32f40_41xxx.lst --xref -o ..\obj\startup_stm32f40_41xxx.o --depend ..\obj\startup_stm32f40_41xxx.d)
 F (..\uCOSIII\uC-CPU\cpu.h)(0x5640B602)()
 F (..\uCOSIII\uC-CPU\cpu_a.asm)(0x5640B602)(--cpu Cortex-M4 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"--list ..\list\cpu_a.lst --xref -o ..\obj\cpu_a.o --depend ..\obj\cpu_a.d)
 F (..\uCOSIII\uC-CPU\cpu_c.c)(0x5640B602)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\cpu_c.o --omf_browse ..\obj\cpu_c.crf --depend ..\obj\cpu_c.d)

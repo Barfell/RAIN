@@ -67,18 +67,20 @@ void flash_w_buffer(int FlashAddress, char *Data)
 	while(*Data != '\0')
 	{
 		while(FLASH_ProgramByte(FlashAddress, *Data) != FLASH_COMPLETE);
-		Data++;
 		FlashAddress++;
+		Data++;
 	}
 }
 
+
 char* flash_r_buffer(int FlashAddress, int length)
 {
-	char Data[200]={'\0'};
+	char Data[4096]={'\0'};
 	int i=0;
 	for(i=0; i<length; i++ )
 		{
-			Data[i] = *( (char *)(FlashAddress+i) );
+			Data[i] = (  *( (char *)(FlashAddress+i) )  == 0xff ) ? 0x00 : *( (char *)(FlashAddress+i) );//如果没有写入数据，默认状态是0xff，此时转换为0x00(null)
+			//Data[i] =   *( (char *)(FlashAddress+i) );//直接读取
 		}
 	return Data;
 }

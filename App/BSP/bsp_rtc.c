@@ -7,7 +7,7 @@
 //获取时间
 char* get_time(void)
 {  
-	char time[50]={'\0'};
+	char time[30]={'\0'};
 	RTC_TimeTypeDef   	RTC_GetTimeStructure;
 	RTC_DateTypeDef 	RTC_GetDateStructure;
 	if (RTC_ReadBackupRegister(RTC_BKP_DR0) != 0x32F1)//假如修改了，则再次进行配置
@@ -22,9 +22,9 @@ char* get_time(void)
 			RTC_GetDate(RTC_Format_BIN, &RTC_GetDateStructure);
 			//2015-11-10-10:18:33
 			sprintf(time,"20%d-%d-%d-%d:%d:%d|",\
-			RTC_GetDateStructure.RTC_Year,RTC_GetDateStructure.RTC_Month,\
-			RTC_GetDateStructure.RTC_Date,RTC_GetTimeStructure.RTC_Hours,\
-			RTC_GetTimeStructure.RTC_Minutes,RTC_GetTimeStructure.RTC_Seconds);
+			(RTC_GetDateStructure.RTC_Year), (RTC_GetDateStructure.RTC_Month),\
+			(RTC_GetDateStructure.RTC_Date), (RTC_GetTimeStructure.RTC_Hours),\
+			(RTC_GetTimeStructure.RTC_Minutes), (RTC_GetTimeStructure.RTC_Seconds) );
 		}
 	return time;
 }
@@ -117,14 +117,14 @@ void set_time(	unsigned char year,
 	RTC_DateStructure.RTC_Date = day;
 	RTC_DateStructure.RTC_WeekDay = week;
 	//设置时间
-	RTC_SetDate(RTC_Format_BCD, &RTC_DateStructure);
+	RTC_SetDate(RTC_Format_BIN, &RTC_DateStructure);
 	
 	
 	RTC_TimeStructure.RTC_H12     = ampm;
 	RTC_TimeStructure.RTC_Hours   = hour;
 	RTC_TimeStructure.RTC_Minutes = min;
 	RTC_TimeStructure.RTC_Seconds = sec; 
-	RTC_SetTime(RTC_Format_BCD, &RTC_TimeStructure);   
+	RTC_SetTime(RTC_Format_BIN, &RTC_TimeStructure);   
 
 	RTC_WriteBackupRegister(RTC_BKP_DR0, 0x32F1);
 }

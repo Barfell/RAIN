@@ -13,6 +13,21 @@ void hextostr(unsigned char *str ,unsigned char hex)
 		{*(str+1) = (hex%16)+'0';}
 }
 
+char* bcdtostr(unsigned char bcd)
+{
+	char str[2];
+	if( (bcd / 16) > 9)
+		{*str = (bcd / 16)+'0'+ 7;}
+	else
+		{*str = (bcd / 16)+'0';}
+
+	if((bcd%16) > 9)
+		{*(str+1) = (bcd%16)+'0' + 7;}
+	else
+		{*(str+1) = (bcd%16)+'0';}
+
+	return str;
+}
 
 unsigned int SoftGenCrc32(unsigned int* puData, unsigned int uSize) 
 { 

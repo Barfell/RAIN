@@ -3,7 +3,7 @@
 void SetClock(void);
 void wwatch_dog_init(void);
 void iwatch_dog_init(void);
-void read_dev_id(unsigned char* DevID_string);
+void read_dev_id(char* DevID_string);
 #endif
 
 

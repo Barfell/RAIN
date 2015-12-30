@@ -132,6 +132,15 @@ void task3(void)
 	set_alarm(0,0,1);
 	printf("%s\r\n",get_time2());
 	
+	if(*(char*)0x080e0000 == 0xff)
+	{
+		MCUFlashUnlock();			   
+		while(MCUFlashErase(FLASH_Sector_10) != 1);//sector10
+		while(MCUFlashErase(FLASH_Sector_11) != 1);//sector11---清除雨量数据
+		while(FLASH_ProgramWord(RAINNUMBERS_ADDR, 0) != FLASH_COMPLETE);//数量为0
+		FLASH_Lock();
+	}
+	
 	while(1)
 	{
 		AppMain();//假如有串口数据
