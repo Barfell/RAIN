@@ -64,7 +64,7 @@
 "..\obj\lib_mem.o"
 "..\obj\lib_mem_a.o"
 "..\obj\lib_str.o"
---library_type=microlib --strict --scatter "..\obj\emWin.sct"
+--library_type=microlib --strict --scatter "..\obj\SCT.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
---list "..\list\emWin.map" -o ..\obj\emWin.axf
+--list "..\list\SCT.map" -o ..\obj\SCT.axf

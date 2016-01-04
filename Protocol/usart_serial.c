@@ -4,8 +4,8 @@ STATIC U32 g_u32Uart3RevCount = 0;
 STATIC U8 g_u8LastValue;
 extern PQueueInfo pUart3QueueInfo;//串口环形队列
 
-unsigned char preData=0;
-unsigned char finishflag = 0;//主机下发命令结束标志
+unsigned char UartPreData=0;
+unsigned char UartFinishFlag = 0;//主机下发命令结束标志
 
 
 VOID USART1_IRQHandler(VOID)
@@ -20,10 +20,10 @@ VOID USART1_IRQHandler(VOID)
 		u8Value = USART_ReceiveData(USART1);
 		//while(AddQueue(pUart3QueueInfo, u8Value) != TRUE);
 		AddQueue(pUart3QueueInfo, u8Value);
-		if(preData == '\r' && u8Value == '\n')
-		{finishflag = 1;}
+		if(UartPreData == '\r' && u8Value == '\n')
+		{UartFinishFlag = 1;}
   	}
-	preData = u8Value;//记录上一次的数据
+	UartPreData = u8Value;//记录上一次的数据
 	OSIntExit();//退出中断--ucosiii
 }
 

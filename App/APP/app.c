@@ -14,8 +14,6 @@ static  CPU_STK  AppTaskTASK3Stk[APP_CFG_TASK_TASK3_STK_SIZE];
 PQueueInfo pUart3QueueInfo;//串口缓冲
 /***************************************************************/
 
-extern int rainnumber;
-
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 //开始任务
@@ -87,7 +85,6 @@ void task1(void)
 	while(1)
 	{
 		OSTimeDlyHMSM(0,0,1,0,OS_OPT_TIME_DLY,&err);
-		//printf("number:%d\r\n",rainnumber);
 	}
 }
 
@@ -100,6 +97,7 @@ void task2(void)
     while(1)
     {
 		OSTimeDlyHMSM(0,0,5,0,OS_OPT_TIME_DLY,&err);
+		//printf("Current Time:%s\r\n",get_time());
     }
 }
 
@@ -111,35 +109,40 @@ void task2(void)
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 void task3(void)
 {
+	char DEVICE_ID[50];
 	OS_ERR      err;
-	
 	pUart3QueueInfo = malloc(sizeof(CQueueInfo));//申请内存.串口缓冲
 	memset(pUart3QueueInfo, 0, sizeof(CQueueInfo));
+	
+	printf("-----SCT15001-Version 0.0------\r\n          @Copyright SZDT Technology.\r\n");
+	
 	bsp_io_init();//IO口
-	UsartConfig();//串口设置配置
+	printf("Uart Init                 Ok.\r\n");
+	printf("Control IO Init           Ok.\r\n");
 	SW_12V(1);//电源
 	SW_5V(1);//正负电源，用于检测回波
-	
+	printf("Power Control IO Init     Ok.\r\n");
 /*********************************************************/
+	read_dev_id(DEVICE_ID);
+	printf("CHIP ID: %s\r\n",DEVICE_ID);
 	voltage_adc_init();//内部电压
-	FreqModuleInit();//测频率模块初始化
-	GetFreq(1);//获取频率
-	LTC2402Init();//温度采集初始化
+	printf("Inner ADC Init            Ok.\r\n");
+	printf("Inner ADC Value:          %f v\r\n",get_dev_voltage(get_adc_value()));
 	rain_gpio();//雨量GPIO初始化
-/********************************************************/
-	
+	printf("RainCounter Init          Ok.\r\n");
+	FreqModuleInit();//测频率模块初始化
+	printf("FreqModule Init           Ok.\r\n");
+	LTC2402Init();//温度采集初始化
+	printf("LTC2402 Init              Ok.\r\n");
+	printf("RTC Configration......\r\n");
 	RTC_Config(inner);
-	set_alarm(0,0,1);
-	printf("%s\r\n",get_time2());
+	printf("RTC Configed In Inner Clock Mode.\r\n");
+	printf("Current Time:<-%s->\r\n",get_time2());
+	printf("Board All Moudles Init Done.\r\n");
+/********************************************************/
+	GetFreq(1);//获取频率
 	
-	if(*(char*)0x080e0000 == 0xff)
-	{
-		MCUFlashUnlock();			   
-		while(MCUFlashErase(FLASH_Sector_10) != 1);//sector10
-		while(MCUFlashErase(FLASH_Sector_11) != 1);//sector11---清除雨量数据
-		while(FLASH_ProgramWord(RAINNUMBERS_ADDR, 0) != FLASH_COMPLETE);//数量为0
-		FLASH_Lock();
-	}
+	
 	
 	while(1)
 	{

@@ -1,6 +1,7 @@
+//个人小工具
 #include  <includes.h>
 
-void hextostr(unsigned char *str ,unsigned char hex)
+void hextostr(char *str ,unsigned char hex)
 {
 	if( (hex / 16) > 9)
 		{*str = (hex / 16)+'0'+ 7;}
@@ -13,21 +14,6 @@ void hextostr(unsigned char *str ,unsigned char hex)
 		{*(str+1) = (hex%16)+'0';}
 }
 
-char* bcdtostr(unsigned char bcd)
-{
-	char str[2];
-	if( (bcd / 16) > 9)
-		{*str = (bcd / 16)+'0'+ 7;}
-	else
-		{*str = (bcd / 16)+'0';}
-
-	if((bcd%16) > 9)
-		{*(str+1) = (bcd%16)+'0' + 7;}
-	else
-		{*(str+1) = (bcd%16)+'0';}
-
-	return str;
-}
 
 unsigned int SoftGenCrc32(unsigned int* puData, unsigned int uSize) 
 { 
@@ -60,14 +46,5 @@ unsigned int HardGenCrc32(unsigned int* puData, unsigned int uSize)
 
 
 
-void usart_update_packet(unsigned char *p,unsigned int length)
-{
-	while(length != 0)
-	{
-		//while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);
-		USART_SendData(USART3, *(p++) );
-		while (USART_GetFlagStatus(USART3, USART_FLAG_TC) == RESET);
-		length--;
-	}
-}
+
 

@@ -1,4 +1,4 @@
-Dependencies for Project 'emWin', Target 'Freq': (DO NOT MODIFY !)
+Dependencies for Project 'emWin', Target 'SCT': (DO NOT MODIFY !)
 F (..\App\bsp.c)(0x56835154)(-c --cpu Cortex-M4 -D__MICROLIB -g -O2 --apcs=interwork -I..\App -I..\App\BSP -I..\LIB\INC -I..\LIB\SRC -I..\emWin\Config -I..\emWin\inc -I..\emWin\Lib -I..\uCOSIII\uC-CPU -I..\uCOSIII\uC-LIB -I..\uCOSIII\uC-Serial\Driver -I..\uCOSIII\uC-Serial\Line -I..\uCOSIII\uC-Serial\Source -I..\uCOSIII\uC-Serial\OS -I..\uCOSIII\uCOS-III\Ports -I..\uCOSIII\uCOS-III\Source -I..\emWin\Demo -I..\App\APP -I..\Protocol-I "D:\Program Files\mdk\ARM\RV31\INC"-I "D:\Program Files\mdk\ARM\CMSIS\Include"-I "D:\Program Files\mdk\ARM\Inc\ST\STM32F4xx"-DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DSTM32F40_41xxx-o ..\obj\bsp.o --omf_browse ..\obj\bsp.crf --depend ..\obj\bsp.d)
 I (E:\PROJECT\RAIN\App\includes.h)(0x5681E85B)
 I (D:\Program Files\mdk\ARM\ARMCC\include\stdarg.h)(0x51C7B744)

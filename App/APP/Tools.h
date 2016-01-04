@@ -24,8 +24,7 @@ enum
 	
 };
 
-void hextostr(unsigned char *str ,unsigned char hex);
-char* bcdtostr(unsigned char bcd);
+void hextostr(char *str ,unsigned char hex);
 
 unsigned int SoftGenCrc32(unsigned int* puData, unsigned int uSize);
 unsigned int HardGenCrc32(unsigned int* puData, unsigned int uSize);

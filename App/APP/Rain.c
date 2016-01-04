@@ -59,7 +59,7 @@ void EXTI0_IRQHandler(void)
 			   
 			MCUFlashUnlock();
 			//get_time返回的值里面的时间是以bin格式体现的，所以当时间为个位数的时候，不会是‘0x’ 而是‘x’，导致不够21个字节,
-			flash_w_buffer( RAINDATA_ADDR + (DataNumber*21), Rain_RAM);//写入数据到flash 21个字节存储一组数据
+			flash_w_buffer( RAINDATA_ADDR + (DataNumber*20), Rain_RAM);//写入数据到flash 21个字节存储一组数据
 
 			/*变更flash里面存储的数量值*/
 			while(MCUFlashErase(FLASH_Sector_10) != 1);//sector10

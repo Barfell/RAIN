@@ -1,4 +1,4 @@
-
+//主要任务，用于检测命令，响应命令等等操作
 #include  <includes.h>
 
 #define APPCOMMUNICATE_PORT USART1
@@ -65,12 +65,12 @@ U8 szResponse[]         = "#SCTXXXXX SUCCESS\r\n";
 
 //串口相关缓冲
 extern PQueueInfo pUart3QueueInfo;//串口环形队列
-extern unsigned char finishflag;
+extern unsigned char UartFinishFlag;
 
 //雨量相关缓冲
-extern int RainNumber_RAM;
+extern int  RainNumber_RAM;
 extern char Rain_RAM[1024];
-extern int RainNumber_FLASH;
+
 
 STATIC VOID AppCommunicatePort(USART_TypeDef* USARTx, U8 *pBuf, U16 u16Length)
 {	
@@ -221,9 +221,9 @@ STATIC VOID GetCurrentAppConfigure(PProtocolInfo pProtocolInfo)
 VOID HandleAllModule(PProtocolInfo pProtocolInfo)
 {
 	int RainNumInFlash = 0;//flash数据个数
-	int i;
-	char szData[4496] = {'\0'};
-	char timebuf[20]={'\0'};
+	int i=0;
+	char szData[2048] = {'\0'};
+	char timebuf[30]={'\0'};
 	char szId[50];
 	double f1 = 0.0;
 	double f2 = 0.0;
@@ -243,9 +243,15 @@ VOID HandleAllModule(PProtocolInfo pProtocolInfo)
 	double t8 = 0.0;
 	double voltage = 0.0;
 
+	//printf("enter HandleAllModule\r\n");
+	
 	read_dev_id(szId);//id
+	
+	//printf("enter read_dev_id\r\n");
 	strcat(timebuf,get_time2());//time
+	//printf("enter get_time2\r\n");
 	voltage = get_dev_voltage(get_adc_value());//v
+	//printf("enter get_dev_voltage\r\n");
 	//freq
 	f1 = GetFreq(1);
 	f2 = GetFreq(2);
@@ -272,6 +278,7 @@ VOID HandleAllModule(PProtocolInfo pProtocolInfo)
 	//判断flash里面是否有数据，假如没有数据，则直接上传ram里面的数据
 	if(RainNumInFlash == 0)//flash里面没有数据
 	{
+		//printf("RainNumInFlash == 0\r\n");
 		//打包ram全部数据
 		sprintf((char *)szData, "#SCT%s=0x%s %s V:%f M1=%s P1=0 M2=%f P2=%f M3=%f P3=%f M4=%f P4=%f M5=%f P5=%f M6=%f P6=%f M7=%f P7=%f M8=%f P8=%f%s",\
 		szDeviceName, szId , timebuf , voltage , Rain_RAM, f2,t2,f3,t3,f4,t4,f5,t5,f6,t6,f7,t7,f8,t8,szEndInfo);
@@ -279,11 +286,11 @@ VOID HandleAllModule(PProtocolInfo pProtocolInfo)
 		RainNumber_RAM = 0;
 		memset(Rain_RAM,'\0',1024);
 		HandleDataPackage(szData, strlen((char *)szData), pProtocolInfo);
+		memset(szData,'\0',2048);
 	}
-	
-	
 	else//flash里面有数据
 	{
+		//printf("RainNumInFlash != 0\r\n");
 		//头
 		printf("#SCT%s=0x%s %s V:%f M1=",szDeviceName, szId , timebuf , voltage);
 
@@ -291,20 +298,23 @@ VOID HandleAllModule(PProtocolInfo pProtocolInfo)
 		for(i = 0; i < RainNumInFlash/10; i++)
 		{
 		//strcat和sprintf函数都会判断插入的字符串是否断掉
-			memset(szData,'\0',4496);
-			sprintf(szData, "%s",flash_r_buffer(RAINDATA_ADDR + i*210, 210));//读出flash里面的数据
+			memset(szData,'\0',2048);
+			sprintf(szData, "%s",flash_r_buffer(RAINDATA_ADDR + i*200, 200));//读出flash里面的数据
 			printf("%s",szData);
 		}
+		
+		
 		//ram
 		printf("%s",Rain_RAM);		
 		//尾
-		memset(szData,'\0',4496);
+		memset(szData,'\0',2048);
 		printf(" P1=0 M2=%f P2=%f M3=%f P3=%f M4=%f P4=%f M5=%f P5=%f M6=%f P6=%f M7=%f P7=%f M8=%f P8=%f%s",\
 		f2,t2,f3,t3,f4,t4,f5,t5,f6,t6,f7,t7,f8,t8,szEndInfo);		
 		
 		//清除
 		RainNumber_RAM = 0;
 		memset(Rain_RAM,'\0',1024);
+		memset(szData,'\0',2048);
 		
 		MCUFlashUnlock();			   
 		while(MCUFlashErase(FLASH_Sector_10) != 1);//sector10---清除雨量数据的数量
@@ -312,8 +322,6 @@ VOID HandleAllModule(PProtocolInfo pProtocolInfo)
 		while(FLASH_ProgramWord(RAINNUMBERS_ADDR, 0) != FLASH_COMPLETE);//数量为0
 		FLASH_Lock();
 	}
-	
-	
 }
 
 
@@ -378,7 +386,7 @@ STATIC VOID HandleTIME(char* s8Value, PProtocolInfo pProtocolInfo)
 	week = *(s8Value+34) - 48;
 	ampm = *(s8Value+36) - 48;
 	
-	printf("s:y-%s m-%s d-%s h-%s m-%s s-%s\r\n",s_year,s_mounth,s_date,s_min,s_hour,s_second);
+	//printf("s:y-%s m-%s d-%s h-%s m-%s s-%s\r\n",s_year,s_mounth,s_date,s_min,s_hour,s_second);
 	
 	year = atoi(s_year);
 	mounth = atoi(s_mounth);
@@ -391,7 +399,7 @@ STATIC VOID HandleTIME(char* s8Value, PProtocolInfo pProtocolInfo)
 	//printf("int:%d-%d-%d-%d-%d-%d week-%d ampm-%d\r\n",year,mounth,date,min,hour,second,week,ampm);
 	set_time(year,mounth,date,min,hour,second,week,ampm);
 	
-	printf("SCT15001 SUCCESS :%s \r\n",s8Value);
+	printf("SCT15001 TIME SUCCESS\r\n");
 	
 	
 	
@@ -489,6 +497,7 @@ STATIC U8 HandleAppCmdProc(U8 *pBuf, U16 u16Length, PProtocolInfo pProtocolInfo)
 			//szCmd1
 			else if((memcmp(pBuf, szCmd1, ARRAY_SIZEOF(szCmd1)) == 0) && (u16Length == ARRAY_SIZEOF(szCmd1)))
 			{
+				//printf("123\r\n");
 				HandleAllModule(pProtocolInfo);
 			}
 			//szCmd2
@@ -573,7 +582,7 @@ VOID AppMain(VOID)
 	
 	pQueueInfo = AppConfigure(APPCOMMUNICATE_PORT);
 
-	/*修改机号*/
+	/*修改设备号*/
 	memcpy((char *)(szInquery1Cmd+3), szDeviceName, ARRAY_SIZEOF(szDeviceName));
 	memcpy((char *)(szConfigureInfo1+3), szDeviceName, ARRAY_SIZEOF(szDeviceName));
 	memcpy((char *)(szConfigureInfo2+3), szDeviceName, ARRAY_SIZEOF(szDeviceName));
@@ -584,9 +593,9 @@ VOID AppMain(VOID)
 	
 		if(GetQueueLength(pQueueInfo))
 		{ 
-			if(finishflag == 1)//一个命令传输结束
+			if(UartFinishFlag == 1)//一个命令传输结束
 			{
-				finishflag = 0;
+				UartFinishFlag = 0;
 				ReadUsartData(APPCOMMUNICATE_PORT, szData, &u16Length);//读取数据
 				//UsartSend(APPCOMMUNICATE_PORT, szData, u16Length);
 				u8Ret = HandleAppCmdProc(szData, u16Length, pProtocolInfo);//处理对应的命令

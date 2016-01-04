@@ -1,3 +1,4 @@
+//振弦计
 #include <includes.h>
 unsigned char PulseNUM = 0;//发射脉冲个数
 

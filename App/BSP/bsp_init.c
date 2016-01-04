@@ -55,6 +55,7 @@ void read_dev_id(char* DevID_string)
 {
 	unsigned char DevID_tmp[4] = {'\0'};
 	unsigned char i,IDtemp[12];
+	//DevID_string = malloc(50);
 	memset(DevID_string,'\0',50);
 	
 	for(i=0;i<12;i++)
@@ -70,5 +71,6 @@ void read_dev_id(char* DevID_string)
 			strcat((char *)DevID_string,(char *)DevID_tmp);
 			memset(DevID_tmp,'\0',4);
 		}
+	//free(DevID_string);
 }
 

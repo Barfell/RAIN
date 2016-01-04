@@ -44,7 +44,6 @@ void bsp_Init(void)
 	UsartConfig();//串口设置配置
 	SW_12V(1);//电源
 	SW_5V(1);//正负电源，用于检测回波
-	printf("init ok\r\n");
 }
 
 /*

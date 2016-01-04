@@ -36,11 +36,19 @@ void voltage_adc_init(void)
 
 unsigned int get_adc_value(void)
 {
+	int i = 0x1ffff;
 	ADC_RegularChannelConfig(ADC1, 10, 1, ADC_SampleTime_480Cycles );			    
   
 	ADC_SoftwareStartConv(ADC1);		
 	 
-	while(!ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC ));
+	while(!ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC ))
+	{
+		i--;
+		if(i==1)
+		{break;}
+	}
+	
+	//printf("adc ok...\r\n");
 
 	return ADC_GetConversionValue(ADC1);
 }
